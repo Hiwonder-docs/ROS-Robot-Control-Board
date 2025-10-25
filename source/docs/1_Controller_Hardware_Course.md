@@ -4,7 +4,7 @@
 
 ### 1.1.1 Development Board Diagram
 
-<img class="common_img" src="../_static/media/chapter_1\section_1\media\image1.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_1/section_1/media/image1.png" style="width:500px" />
 
 | NO.  |                     Function Description                     |
 | :--: | :----------------------------------------------------------: |
@@ -36,25 +36,25 @@
 
 1. How to control the control board with Raspberry Pi and Jetson Nano? How to communicate with the control board?
 
-   Answer: Raspberry Pi, Jetson Nano, and similar devices can communicate with the control board via the serial port. It is recommended to use serial port 2 for communication to keep serial port 1 available for downloading programs. This reduces the need for frequent plugging and unplugging, speeding up the debugging process.
+Answer: Raspberry Pi, Jetson Nano, and similar devices can communicate with the control board via the serial port. It is recommended to use serial port 2 for communication to keep serial port 1 available for downloading programs. This reduces the need for frequent plugging and unplugging, speeding up the debugging process.
 
 2. Which functions on the development board are managed by the microcontroller?
 
-   Answer: The microcontroller on the development board manages several components, including the buzzer, robotic arm, servo gimbal, button, Bluetooth module interface, encoder motor interface, USB HOST interface, LED, MPU6050 attitude sensor, USB serial port, display interface, I2C interface, SBUS interface, GPIO expansion port, and more.
+Answer: The microcontroller on the development board manages several components, including the buzzer, robotic arm, servo gimbal, button, Bluetooth module interface, encoder motor interface, USB HOST interface, LED, MPU6050 attitude sensor, USB serial port, display interface, I2C interface, SBUS interface, GPIO expansion port, and more.
 
 3. How to learn to use the development board? How to update the development board firmware?
 
-   Answer: The development board comes with comprehensive tutorials, such as the FREERTOS system LED control tutorial, encoder motor control tutorial, and motor PID control tutorial. Interfaces are pre-implemented to facilitate rapid development. To update the firmware, you can use the USB serial port for downloads and JLink for debug updates. All interfaces are externally connected to make learning and debugging easier.
+Answer: The development board comes with comprehensive tutorials, such as the FREERTOS system LED control tutorial, encoder motor control tutorial, and motor PID control tutorial. Interfaces are pre-implemented to facilitate rapid development. To update the firmware, you can use the USB serial port for downloads and JLink for debug updates. All interfaces are externally connected to make learning and debugging easier.
 
 4. Why are two pins of the main control chip STM32F407VET6 on the development board connected?
 
-   Answer: First, check if the version silk screen on the back of the board is V1.0. If it is version V1.0, it is normal for the two pins to be connected as shown in the figure below. In the V1.0 version, one pin is VDD and the other is related to the chip's built-in voltage measurement standard. These pins need to be connected to correctly read the battery voltage value. In version 1.1, this chip does not require pin soldering.
+Answer: First, check if the version silk screen on the back of the board is V1.0. If it is version V1.0, it is normal for the two pins to be connected as shown in the figure below. In the V1.0 version, one pin is VDD and the other is related to the chip's built-in voltage measurement standard. These pins need to be connected to correctly read the battery voltage value. In version 1.1, this chip does not require pin soldering.
 
-<img class="common_img" src="../_static/media/chapter_1\section_1\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_1/section_1/media/image2.png" style="width:500px"  />
 
-<img class="common_img" src="../_static/media/chapter_1\section_1\media\image3.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_1/section_1/media/image3.png" style="width:300px" />
 
-<img class="common_img" src="../_static/media/chapter_1\section_1\media\image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_1/section_1/media/image4.png" style="width:500px" />
 
 <p style="text-align:center"> (Left: V1.0; Right: V1.1)</p>
 
