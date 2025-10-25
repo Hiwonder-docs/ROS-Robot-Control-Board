@@ -4,7 +4,7 @@
 
 ### 3.1.1 Project Architecture Diagram
 
-The project structure analysis diagram is a functional architecture diagram of the robot car. It outlines the main source code files that the robot car will use. As the original image is too long, it would take up a lot of space. You can refer to the "**RRC Project Structure Diagram.png**" file in the current folder for comparison. The contents of the files involved are located in the "**[Appendix]()**" folder.
+The project structure analysis diagram is a functional architecture diagram of the robot car. It outlines the main source code files that the robot car will use. As the original image is too long, it would take up a lot of space. You can refer to the "**RRC Project Structure Diagram.png**" file in the current folder for comparison. The contents of the files involved are located in the "**[Appendix](https://drive.google.com/drive/folders/1wYGlUMJuNYYNTIAeKbFgjqhX0qfjMQ66?usp=sharing)**" folder.
 
 ### 3.1.2 Architecture Analysis
 
@@ -168,25 +168,25 @@ This chapter mainly focuses on controlling the LEDs on the STM32 main control bo
 
 The hardware connection diagram is as below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_2\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_2/media/image2.png" style="width:500px"  />
 
 ### 3.2.3 Program Download
 
 The example for this section is '**rosrobotcontrollerm4_LED_demo**'.
 
-For specific instructions on how to download the program, refer to the document: '**[2. STM32 Development Fundamentals/2.3 Project Compilation and Download]()**'.
+For specific instructions on how to download the program, refer to the document: '**[2. STM32 Development Fundamentals/2.3 Project Compilation and Download](https://wiki.hiwonder.com/projects/ROS-Robot-Control-Board/en/latest/docs/2_STM32_Development_Fundamentals.html#project-compilation-download)**'.
 
 ### 3.2.4 Program Outcome
 
 Wait for 3 seconds for the LED to turn on, then another 3 seconds for it to turn off. Afterward, wait 3 seconds for the LED to start blinking (off for 200ms, on for 200ms). After blinking for 3 seconds, the LED will turn off.
 
-<img class="common_img" src="../_static/media/chapter_3\section_2\media\image3.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_2/media/image3.jpeg" style="width:500px"  />
 
 ### 3.2.5 State Machine Configuration
 
 Use STM32CubeMX to check the information on software timers and state machines. In the '**Pinout & Configuration**' section, go to '**FreeRTOS**' and open '**Timers and Semaphores**'. You will find the details of '**led_task_handler**' there.
 
-<img class="common_img" src="../_static/media/chapter_3\section_2\media\image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_2/media/image4.png" style="width:500px" />
 
 The current application is in Hiwonder/Peripherals/led.c
 
@@ -196,7 +196,7 @@ The source code for this course is located in the same folder as this tutorial d
 
 * **LED Functionality Implementation**
 
-<img class="common_img" src="../_static/media/chapter_3\section_2\media\image5.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_2/media/image5.png" style="width:500px" />
 
 Above is the App.c file, where `app_task_entry()` serves as the user's entry function. The main programming flow is as follows:
 
@@ -216,7 +216,7 @@ The program uses a timer to control the blinking of the LED, and delay functions
 
 * **Control LED On, Off and Blinking**
 
-<img class="common_img" src="../_static/media/chapter_3\section_2\media\image6.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_2/media/image6.png" style="width:500px" />
 
 Above is the LED.c file, which constructs an LED object and provides three methods to control the LED:
 
@@ -244,7 +244,7 @@ The hardware connection diagram is as below:
 
 The example for this section is '**rosrobotcontrollerm4_key_buzzer**'.
 
-For specific instructions on how to download the program, refer to the document: '**[2. STM32 Development Fundamentals/2.3 Project Compilation and Download]()**'.
+For specific instructions on how to download the program, refer to the document: '**[2. STM32 Development Fundamentals/2.3 Project Compilation and Download](https://wiki.hiwonder.com/projects/ROS-Robot-Control-Board/en/latest/docs/2_STM32_Development_Fundamentals.html#project-compilation-download)**'.
 
 ### 3.3.4 Program Outcome
 
@@ -322,17 +322,17 @@ This section primarily involves using the built-in ADC circuit in the STM32 main
 
 Connect the USB to serial port 1 and the other end to a PC. The hardware connection diagram is as follows:
 
-<img class="common_img" src="../_static/media/chapter_3\section_4\media\image2.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_4/media/image2.jpeg" style="width:500px"  />
 
 ### 3.4.3 Program Download
 
-The example for this section is "**rosrobotcontrollerm4_ADC_battery**". For specific download methods, refer to the document: "**[2. STM32 Development Fundamentals/2.3 Project Compilation and Download]()**".
+The example for this section is "**rosrobotcontrollerm4_ADC_battery**". For specific download methods, refer to the document: "**[2. STM32 Development Fundamentals/2.3 Project Compilation and Download](https://wiki.hiwonder.com/projects/ROS-Robot-Control-Board/en/latest/docs/2_STM32_Development_Fundamentals.html#project-compilation-download)**".
 
 ### 3.4.4 Program Outcome
 
-<img class="common_img" src="../_static/media/chapter_3\section_4\media\image3.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_4/media/image3.png" style="width:600px" />
 
-Open the serial assistant (located in "**[Appendix]()**"), find the serial port connected to the development board (it may not necessarily be COM4, select based on actual conditions), and set it as follows:
+Open the serial assistant (located in "**[Appendix](https://drive.google.com/drive/folders/1aXGtI4NxXUY_R-C1QPpTinZ5E3yDQ7kA?usp=sharing)**"), find the serial port connected to the development board (it may not necessarily be COM4, select based on actual conditions), and set it as follows:
 
 Baud Rate: 115200
 
@@ -350,7 +350,7 @@ After opening the serial port, you will see continuously refreshed data, where t
 
 Use the STM32CubeMX software to view pin information. During program operation, the ADC conversion function of the pin will be enabled. The corresponding chip pin is: PB0
 
-<img class="common_img" src="../_static/media/chapter_3\section_4\media\image4.png" style="width:200px" />
+<img class="common_img" src="../_static/media/chapter_3/section_4/media/image4.png" style="width:200px" />
 
 ### 3.4.6 Source Code Analysis
 
@@ -358,7 +358,7 @@ The source code for this course is located in the same folder as this tutorial d
 
 * **Voltage Print Output**
 
-<img class="common_img" src="../_static/media/chapter_3\section_4\media\image5.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_4/media/image5.png" style="width:500px" />
 
 The App.c file includes the user entry function `app_task_entry()`. The main programming flow is as follows:
 
@@ -372,7 +372,7 @@ The external variable `battery_volt` stores the measured battery voltage value. 
 
 * **Reading Battery Voltage**
 
-<img class="common_img" src="../_static/media/chapter_3\section_4\media\image6.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_4/media/image6.png" style="width:600px" />
 
 The battery_handle.c file contains the `battery_check_timer_callback()` function, which is the callback function for the battery monitoring timer and is entered every 50ms to read the voltage value. The ADC value read will be stored in the `adc_value array`. The program flow is as follows:
 
@@ -410,7 +410,7 @@ This chapter focuses on reading data from the built-in MPU6050 on the STM32 deve
 
 Connect the OLED display to the main control board via I2C expansion interface. The hardware connection diagram is as follows:
 
-<img class="common_img" src="../_static/media/chapter_3\section_5\media\image2.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image2.jpeg" style="width:500px"  />
 
 ### 3.5.3 Program Download
 
@@ -422,19 +422,19 @@ After downloading the program, press the **RESET** button to see the real-time a
 
 After reset, the data displayed for the three axes is basically zero (with some minor errors), as shown below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_5\media\image3.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image3.jpeg" style="width:500px"  />
 
 For forward and backward tilting, mainly the Roll data changes.
 
-<img class="common_img" src="../_static/media/chapter_3\section_5\media\image4.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image4.jpeg" style="width:500px"  />
 
 For left and right tilting, mainly the Pitch data changes.
 
-<img class="common_img" src="../_static/media/chapter_3\section_5\media\image5.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image5.jpeg" style="width:500px"  />
 
 For plane rotation, mainly the Yaw data changes.
 
-<img class="common_img" src="../_static/media/chapter_3\section_5\media\image6.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image6.jpeg" style="width:500px"  />
 
 ### 3.5.5 Pin Configuration
 
@@ -442,11 +442,11 @@ View the pin information through stm32cubemx software. The MCU communicates with
 
 The corresponding I2C chip pins are PB10 and PB11; the interrupt pin is PB12.
 
-<img class="common_img" src="../_static/media/chapter_3\section_5\media\image7.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image7.png" style="width:300px" />
 
 ### 3.5.6 Source Code Analysis
 
-The source code for this section is located in the "**[Appendix]()**" folder. The main program framework is designed as follows:
+The source code for this section is located in the "**[Appendix](https://drive.google.com/drive/folders/1wYGlUMJuNYYNTIAeKbFgjqhX0qfjMQ66?usp=sharing)**" folder. The main program framework is designed as follows:
 
 Analyze interrupts through the Application/User/Core/stm32f4xx_it.c file
 
@@ -454,7 +454,7 @@ Analyze the display task through the Hiwonder/System/app.c file
 
 Analyze the IMU reading task through the Hiwonder/Porting/imu_porting.c file
 
-<img class="common_img" src="../_static/media/chapter_3\section_5\media\image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image8.png" style="width:500px"  />
 
 The analysis is divided into three parts:
 
@@ -470,13 +470,13 @@ In the Application/User/Core/stm32f4xx_it.c file, the `EXTI15_10_IRQHandler()` f
 
 The main controller enables external interrupts on the pin connected to the IMU to detect voltage level changes, thereby monitoring the IMU data transmission status. When an external interrupt is triggered, it unblocks the flag indicating IMU data readiness (i.e., the semaphore IMU_data_readyHandle in the RTOS), as shown below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_5\media\image9.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image9.png" style="width:500px" />
 
 * **IMU Reading Task**
 
 The reading task first `calls begin()` to initialize the IMU and its parameters. After that, it enters a loop to continuously wait for and read IMU data.
 
-<img class="common_img" src="../_static/media/chapter_3\section_5\media\image10.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image10.png" style="width:500px" />
 
 The `osSemaphoreAcquire()` function in the RTOS system acquires the semaphore:
 
@@ -486,7 +486,7 @@ The `osSemaphoreAcquire()` function in the RTOS system acquires the semaphore:
 
 If there is no semaphore in the queue, the function waits and executes other tasks. When a semaphore is available, it retrieves it and continues running the subsequent program.
 
-The `GetEulerAngles()` function is called to read the IMU’s Euler angle data, which is then stored into the rpy array.
+The `GetEulerAngles()` function is called to read the IMU's Euler angle data, which is then stored into the rpy array.
 
 * **IMU Data Display Task**
 
@@ -500,11 +500,13 @@ The real-time Euler angle data stored in the rpy array is displayed on the OLED 
 
 Delay for 150ms；
 
-<img class="common_img" src="../_static/media/chapter_3\section_5\media\image11.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image11.png" style="width:500px" />
 
 As described above, in the "**IMU reading task**," each time the semaphore changes, the real-time IMU data is immediately read and stored into the global rpy array. Therefore, in the current task, it is sufficient to continuously output the three elements of the rpy array (Euler angles) via the OLED display and serial port to represent the real-time attitude data.
 
 Since refreshing the OLED screen takes time, a delay is required in each loop cycle to ensure proper display of the current data and smooth screen updates.
+
+<p id="anchor_3_6"></p>
 
 ## 3.6 RRC PWM Servo Control Principle and Source Code Analysis
 
@@ -538,11 +540,11 @@ The control signal enters the signal modulation chip from the receiver channel t
 
 1.  The diagram below shows the reserved interfaces J1 and J2 provided by the STM32 main control board for the PWM servo.
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image2.png" style="width:500px" />
 
 The enlarged detail image below shows the reserved connection ports J1 and J2, highlighted in the red box. There are three types of connections: signal line (S), power supply (+5V), and ground (−), as indicated in the green box.
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image3.png" style="width:500px" />
 
 2. Connect the servo's 3-pin cable to the corresponding J2 or J1 interface, as shown below:
 
@@ -554,15 +556,15 @@ Red -\> Power supply (+5V)
 
 Black -\> Ground (−)
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image4.png" style="width:500px" />
 
 <p style="text-align:center">Connect to J2</p>
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image5.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image5.png" style="width:500px" />
 
 <p style="text-align:center">Connect to J1</p>
 
-The STM32 main control board can be powered by our 7.4V lithium battery pack. For detailed connection instructions, please refer to "[**[3.6.7 Usage and Precautions of LiPo Batteries]()**" in the current document path.
+The STM32 main control board can be powered by our 7.4V lithium battery pack. For detailed connection instructions, please refer to "**[3.6.7 Usage and Precautions of LiPo Batteries](#anchor_3_6_7)**" in the current document path.
 
 > [!NOTE]
 >
@@ -570,17 +572,17 @@ The STM32 main control board can be powered by our 7.4V lithium battery pack. Fo
 
 ### 3.6.3 Program Burning
 
-The sample program can be found in '**[3.6 RRC PWM Servo Control Example/rosrobotcontrollerm4_pwmServo](本章节附件)**'. For the steps and precautions required for programming burning, please refer to '**[2. STM32 Development Fundamentals/2.3 Project Compilation and Download]()**' document. Simply compile the '**rosrobotcontrollerm4_pwmServo**' program located in the current document path to generate the hex file and proceed with the burning process.
+The sample program can be found in '**[3.6 RRC PWM Servo Control Example/rosrobotcontrollerm4_pwmServo](https://drive.google.com/drive/folders/1vqrtvotG6MMS5nd01oj0acQY2ACpRavl?usp=sharing)**'. For the steps and precautions required for programming burning, please refer to '**[2. STM32 Development Fundamentals/2.3 Project Compilation and Download](https://wiki.hiwonder.com/projects/ROS-Robot-Control-Board/en/latest/docs/2_STM32_Development_Fundamentals.html#project-compilation-download)**' document. Simply compile the '**rosrobotcontrollerm4_pwmServo**' program located in the current document path to generate the hex file and proceed with the burning process.
 
 ### 3.6.4 Program Outcome
 
 Based on the set PWM servo pulse width values, the servo rotates to the corresponding angles, as shown in the following diagram:
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image6.png" style="width:500px"  />
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image7.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image7.png" style="width:500px"  />
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image8.png" style="width:500px"  />
 
 ### 3.6.5 Code Analysis
 
@@ -590,13 +592,13 @@ Based on the set PWM servo pulse width values, the servo rotates to the correspo
 
 **Object PWMServoObjectTypeDef:**
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image9.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image9.png" style="width:500px" />
 
 Calling the PWM control object generated by the PWMServoObject structure.
 
 **PWMServoObject Structure:**
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image10.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image10.png" style="width:600px" />
 
 This structure is used to configure PWM control objects.
 
@@ -630,25 +632,25 @@ It has the parameter 'new_state' representing the current pin's high or low leve
 
 **Declare function pwm_servo_object_init:**
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image11.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image11.png" style="width:600px" />
 
 This function initializes the PWM servo object. Instantiation requires initializing the servo object pointer.
 
 **Declare function pwm_servo_duty_compare**:
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image12.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image12.png" style="width:600px" />
 
 This function controls the PWM servo pulse width, calculates the pulse width change and the pulse width required for the current speed, and implements control. It needs to be called every 50ms and requires setting the servo object pointer for control.
 
 **Declare function pwm_servo_set_position:**
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image13.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image13.png" style="width:600px" />
 
 Set the angle of the PWM servo. Actually, it only sets several internal variables of the servo object and does not immediately control the servo. The actual servo control is calculated and controlled by `pwm_servo_duty_compare`.
 
 **Declare function pwm_servo_set_offset:**
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image14.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image14.png" style="width:600px" />
 
 Set the offset of the PWM servo, requiring the servo object pointer for control.
 
@@ -658,7 +660,7 @@ File location: Hiwonder/Peripherals
 
 Function pwm_servo_duty_compare:
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image15.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image15.png" style="width:600px" />
 
 This function is used for controlling pulse width change comparison and speed control.
 
@@ -668,7 +670,7 @@ Firstly, it calculates the control parameters of the servo according to the newl
 
 **Function: pwm_servo_set_position：**
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image16.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image16.png" style="width:600px" />
 
 This function is used to set the rotation position of the servo.
 
@@ -678,7 +680,7 @@ Firstly, it is necessary to limit the duration of the movement as well as the ma
 
 **Function pwm_servo_set_offset:**
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image17.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image17.png" style="width:600px" />
 
 This function is used to set the offset of the servo.
 
@@ -688,7 +690,7 @@ Here, the magnitude limit of the offset will be set. When the servo rotates, thi
 
 **Function pwm_servo_object_init:**
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image18.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image18.png" style="width:600px" />
 
 This function is the initialization function for the PWM servo `PWMServoObjectTypeDef` instantiated object.
 
@@ -702,13 +704,13 @@ File location: Hiwonder/Porting
 
 Instantiation of PWM servo objects:
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image19.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image19.png" style="width:500px" />
 
 Instantiate objects of the `PWMServoObjectTypeDef` structure for PWM servos 1-4.
 
 Setting servo:
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image20.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image20.png" style="width:600px" />
 
 Here, four functions are used to configure the interfaces of four PWM servos. They call `HAL_GPIO_WritePin` to set the port number, pin, and high or low level for each PWM servo.
 
@@ -716,7 +718,7 @@ Parameter: `new_state` represents the current pin's high or low level.
 
 PWM servo initialization:
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_1\media\image21.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_1/media/image21.png" style="width:600px" />
 
 This function is used for initializing PWM servos.
 
@@ -747,8 +749,8 @@ This servo featuring high control accuracy, excellent linearity, fast respond an
 | Control Method        | PWM                                                          |
 | PWM Pulse Width Range | The pulse width from 500 to 2500μs corresponds to anglefrom 0 to180° |
 | Pulse Period          | 20ms                                                         |
-| Rotate Speed          | 0.16sec/60°（DC 7.4V）                                       |
-| Stall Torque          | 13kg.cm（DC 6V） 15kg.cm（DC 6.5V）17kg.cm（DC 7.4V）        |
+| Rotate Speed          | 0.16sec/60° (DC 7.4V)                                       |
+| Stall Torque          | 13kg.cm (DC 6V) 15kg.cm (DC 6.5V)17kg.cm (DC 7.4V)        |
 | Rotate Range          | 0~ 180°                                                      |
 | Servo Accuracy        | 0.3°                                                         |
 | Servo Wire            | 30cm                                                         |
@@ -791,7 +793,7 @@ Using the sensor with UNO controller to help you get quick experience.
 
 Take connecting servo to UNO controller with male-to-male Dupond line as example.
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_2/media/image5.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_2/media/image5.png" style="width:500px" />
 
 **3. Project Process**
 
@@ -799,7 +801,7 @@ Step 1: Download and install Ard uino IDE on your computer.
 
 Step 2: Connect LD-1501MG digital servo to UNO board as the picture shown above.
 
-Step 3: Connect UNO board to computer with USB cable. After opening Arduino IDE, please paste “**5. Example code”**in “**File/New**” .
+Step 3: Connect UNO board to computer with USB cable. After opening Arduino IDE, please paste "**5. Example code"**in "**File/New**" .
 
 Step 4: Select suitable demo board and port, then compile and upload the program.
 
@@ -852,15 +854,17 @@ A: We connect black DC plug to a external power as well as supply UNO board and 
 
 Therefore, the provided power voltage is required to meet two demands above so that the voltage should range from DC 7 to 8.4V.
 
+<p id="anchor_3_6_7"></p>
+
 ### 3.6.7 Usage and Precautions of LiPo Batteries
 
 * **Precautions**
 
 1)  When connecting the battery leads, do not connect them directly to the lithium battery without connecting them to the control board! Avoid contact between positive and negative terminals to prevent short circuits!
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_3\media\image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_3/media/image2.png" style="width:500px" />
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_3\media\image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_3/media/image3.png" style="width:500px" />
 
 2)  When connecting the battery leads to the control board, ensure the red end connects to the positive terminal and the black end to the negative terminal, and do not reverse them!
 
@@ -886,39 +890,39 @@ Taking the example of powering with a 7.4V 3500mA battery:
 
 1)  Take out the power connection cable and the Hiwonder Car Controller.
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_3\media\image4.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_6_3/media/image4.jpeg" style="width:500px"  />
 
 2. Loosen the screw on the power interface of the controller.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_6_3\media\image5.jpeg" style="width:500px"  />
+   <img class="common_img" src="../_static/media/chapter_3/section_6_3/media/image5.jpeg" style="width:500px"  />
 
 3. After loosening, connect the red wire of the power connection cable to the '+' terminal and the black wire to the '-' terminal of the controller's power interface (be extremely careful not to reverse the polarity, as it may damage the control board).
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_3\media\image6.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_6_3/media/image6.jpeg" style="width:500px"  />
 
 4. Once connected, tighten the screw securely.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_6_3\media\image7.jpeg" style="width:500px"  />
+   <img class="common_img" src="../_static/media/chapter_3/section_6_3/media/image7.jpeg" style="width:500px"  />
 
 5. Take out the 7.4V lithium battery.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_6_3\media\image8.jpeg" style="width:500px"  />
+   <img class="common_img" src="../_static/media/chapter_3/section_6_3/media/image8.jpeg" style="width:500px"  />
 
 6. Connect the power connection cable from the lithium battery to the controller's power connection cable, ensuring a 'red to red, black to black' connection (here, a reverse-insertion prevention design is used, so do not force it; if it doesn't fit, try rotating it to another side).
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_3\media\image9.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_6_3/media/image9.jpeg" style="width:500px"  />
 
 * **Charging Method**
 
 1)  Connect the DC plug of the battery to the dedicated charger plug provided in the kit, as shown in the figure below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_3\media\image10.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_6_3/media/image10.jpeg" style="width:500px"  />
 
 2. Then, plug the charger into the socket. Users can check the indicator lights on the charger to understand the charging status. Red indicates charging, while green indicates charging is complete.
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_3\media\image11.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_3/media/image11.png" style="width:500px" />
 
-<img class="common_img" src="../_static/media/chapter_3\section_6_3\media\image12.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_6_3/media/image12.png" style="width:500px" />
 
 > [!NOTE]
 >
@@ -964,25 +968,25 @@ The enlarged detail image below shows the reserved connection ports J1 and J2, h
 
 2. Connect the servo's 3-pin cable to the corresponding J2 or J1 interface, as shown below:
 
-   The connection method is as follows:
+The connection method is as follows:
 
-   White -\> Signal line (S)
+White -\> Signal line (S)
 
-   Red -\> Power supply (+5V)
+Red -\> Power supply (+5V)
 
-   Black -\> Ground (−)
+Black -\> Ground (−)
 
-   <img class="common_img" src="../_static/media/chapter_3/section_7/media/image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_7/media/image4.png" style="width:500px" />
 
-   > [!NOTE]
-   >
-   > **Attention: The servo motor must be connected according to the positions shown in the document diagram. Avoid connecting it incorrectly or mistakenly to prevent burning out the motor. Our company will not take any responsibility!!!**
+> [!NOTE]
+>
+> **Attention: The servo motor must be connected according to the positions shown in the document diagram. Avoid connecting it incorrectly or mistakenly to prevent burning out the motor. Our company will not take any responsibility!!!**
 
 ### 3.7.3 Program Download 
 
 The sample program is '**rosrobotcontrollerm4_pwmServo_speed**'.
 
-After downloading the program (refer to '**[2. STM32 Development Fundamentals/2.3 Project Compilation and Download]()**' for details on how to download the program), you need to press the RESET button to reset the microcontroller, which will then start executing the new program.
+After downloading the program (refer to '**[2. STM32 Development Fundamentals/2.3 Project Compilation and Download](https://wiki.hiwonder.com/projects/ROS-Robot-Control-Board/en/latest/docs/2_STM32_Development_Fundamentals.html#project-compilation-download)**' for details on how to download the program), you need to press the RESET button to reset the microcontroller, which will then start executing the new program.
 
 ### 3.7.4 Program Outcome
 
@@ -990,7 +994,7 @@ After pressing reset, the servo will first initialize to 90°, then move to 0°,
 
 ### 3.7.5 Source Code Analysis
 
-This program is only for speed control. For detailed PWM servo control routines, please refer to '**[3.6 RRC PWM Servo Control Principle and Source Code Analysis]()**'.
+This program is only for speed control. For detailed PWM servo control routines, please refer to '**[3.6 RRC PWM Servo Control Principle and Source Code Analysis](#anchor_3_6)**'.
 
 <img class="common_img" src="../_static/media/chapter_3/section_7/media/image5.png" style="width:500px" />
 
@@ -1080,7 +1084,7 @@ Execution process:
 
 \(2\) Fill the content of the data frame: frame header, servo ID, data length, stop servo, checksum, and finally send the data frame via the serial port.
 
-<img class="common_img" src="../_static/media/chapter_3\section_8_1/media/image9.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_8_1/media/image9.png" style="width:500px" />
 
 ### 3.8.2 RRC Bus Servo Simple Rotation and Source Code Analysis
 
@@ -1112,7 +1116,7 @@ We rotated the servo counterclockwise by 90 degrees, then returned it to 0 degre
 
 File location: Hiwonder/app.c. This file implements the simple angle rotation of the servo and sets the position and duration of the servo's movement.
 
-<img class="common_img" src="../_static/media/chapter_3\section_8_2\media\image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_8_2/media/image2.png" style="width:500px" />
 
 The function `serial_servo_set_position()` is used to set the position and duration of movement for the servo. Specific position and duration information is sent to the servo via a serial data frame (defined by the array buffer\[\]). The execution process of the function is as follows:
 
@@ -1124,7 +1128,7 @@ The function `serial_servo_set_position()` is used to set the position and durat
 
 4)  Store the low byte and high byte of the target position in buffer\[5\] and buffer\[6\], and store the low byte and high byte of the movement duration in buffer\[7\] and buffer\[8\]. Calculate the checksum, and finally send the data frame via the serial port.
 
-<img class="common_img" src="../_static/media/chapter_3\section_8_2\media\image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_8_2/media/image3.png" style="width:500px" />
 
 The `serial_servo_stop()` function is designed to send a command to stop the servo via the serial port. The execution process is as follows:
 
@@ -1132,7 +1136,7 @@ The `serial_servo_stop()` function is designed to send a command to stop the ser
 
 2. Fill the content of the data frame: frame header, servo ID, data length, stop the servo, calculate the checksum, and finally send the data frame via the serial port.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_8_2/media/image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_8_2/media/image4.png" style="width:500px" />
 
 ### 3.8.3 Hiwonder Bus Servo Communication Protocol
 
@@ -1147,8 +1151,6 @@ Half-duplex UART asynchronous serial interface which conforms to the protocol ca
 Servo uses the program code to perform the timing control to the UART asynchronous serial interface, realizes the half-work asynchronous serial bus communication, the communication baud rate is 115200bps, and the interface is simple, the protocol is simplified. In your own designed controller, the UART interface for communication with the servo must be handled as shown below.
 
 <img class="common_img" src="../_static/media/chapter_3/section_8_3/media/image2.jpeg" style="width:300px" />
-
-
 
 * **Command Packet**
 
@@ -1178,7 +1180,7 @@ Checksum=~(ID+ Length+Cmd+ Prm1+...PrmN)If the numbers in the brackets are calcu
 
 There are two kinds of commands, write command and read command. Write command: normally, it followed by parameters, write the parameters of the corresponding function into the servo to complete a certain action.
 
-Read command: normally, it will not followed by parameters, when the servo received “**read command**”, it will return the corresponding data immediately , the returned command value with parameters is the same as the "**read command**" value that sent to the servo. So the PC software must immediately prepare to change itself to “**read condition**” after it sends the reading command.
+Read command: normally, it will not followed by parameters, when the servo received "**read command**", it will return the corresponding data immediately , the returned command value with parameters is the same as the "**read command**" value that sent to the servo. So the PC software must immediately prepare to change itself to "**read condition**" after it sends the reading command.
 
 The following table is command that the PC software send to servos.
 
@@ -1249,7 +1251,7 @@ Parameter3: higher 8 bits of preset time. the range of time is 0~30000ms.
 
 The function of this command is similar to this
 
-“**SERVO_MOVE_TIME_WRITE**” command in the first point. But the difference is that the servo will not immediately turn when the command arrives at the servo,the servo will be rotated from current angle to parameter angle at unifor m speed within parameter time until the command name SERVO_MOVE_ST ART sent to servo(command value of 11), then the servo will be rotated from current angle to setting angle at uniform speed within setting time.
+"**SERVO_MOVE_TIME_WRITE**" command in the first point. But the difference is that the servo will not immediately turn when the command arrives at the servo,the servo will be rotated from current angle to parameter angle at unifor m speed within parameter time until the command name SERVO_MOVE_ST ART sent to servo(command value of 11), then the servo will be rotated from current angle to setting angle at uniform speed within setting time.
 
 **4\. Command name: SERVO_MOVE_TIME_WAIT_READ Command value: 8 Length: 3**
 
@@ -1281,11 +1283,11 @@ Parameter 1: servo deviation, range -125~ 125, The corresponding angle of -30 °
 >
 > Note 1:The adjusted deviation value is not saved when power-down by this command, if you want to save please refer to point 10.
 >
-> Note 2: Because the parameter is “**signed char**” type of data, and the command packets to be sent are “**unsigned char**” type of data, so before sending, parameters are forcibly converted to “**unsigned char**” data and then put them in command packet.
+> Note 2: Because the parameter is "**signed char**" type of data, and the command packets to be sent are "**unsigned char**" type of data, so before sending, parameters are forcibly converted to "**unsigned char**" data and then put them in command packet.
 
 **10\. Command name: SERVO_ANGLE_OFFSET_WRITE Command value: 18 Length: 3**
 
-Save the deviation value, and support “**power-down save**” . The adjustment of the deviation is stated in point 9
+Save the deviation value, and support "**power-down save**" . The adjustment of the deviation is stated in point 9
 
 **11\. Command name: SERVO_ANGLE_OFFSET_READ Command value: 9 Length: 7**
 
@@ -1303,7 +1305,7 @@ Parameter 3: lower 8 bits of maximum angle
 
 Parameter 4: higher 8 bits of maximum angle, range 0~1000
 
-And the minimum angle value should always be less than the maximum angle value. The command is sent to the servo, and the rotation angle of the servo will be limited between the minimum and maximum angle. And the angle limit value supports ‘**power-down save**’ .
+And the minimum angle value should always be less than the maximum angle value. The command is sent to the servo, and the rotation angle of the servo will be limited between the minimum and maximum angle. And the angle limit value supports ‘**power-down save**' .
 
 **13\. Command name: SERVO_ANGLE_LIMIT_READ Command value: 21 Length: 3**
 
@@ -1359,7 +1361,7 @@ Only in the motor control mode is valid, control the motor speed, the value of t
 
 > [!NOTE]
 >
-> **Note: Since the rotation speed is the “signed short int” type of data, it is forced to convert the data to “unsigned short int “type of data before sending the command packet.**
+> **Note: Since the rotation speed is the "signed short int" type of data, it is forced to convert the data to "unsigned short int "type of data before sending the command packet.**
 
 **22\. Command name: SERVO_OR_MOTOR_MODE_READ Command value: 30 Length: 3**
 
@@ -1422,7 +1424,7 @@ Table4
 | SERVO_LED_CTRL_READ       | 34            | 4      |
 | SERVO_LED_ERROR_READ      | 36            | 4      |
 
-Table 4 is the command that servo return to the host computer, these commands will only return when host computer send a read command to servo, what’s more, the returned command value is consistent with the read command that the host computer sent to servo. the difference is that the returned value has parameters. The format of the returned data command packet is the same as the command package that the host computer sent to servo, as in Table 1.
+Table 4 is the command that servo return to the host computer, these commands will only return when host computer send a read command to servo, what's more, the returned command value is consistent with the read command that the host computer sent to servo. the difference is that the returned value has parameters. The format of the returned data command packet is the same as the command package that the host computer sent to servo, as in Table 1.
 
 **1.Command name: SERVO_MOVE_TIME_READ Command value: 2Length: 7**
 
@@ -1496,7 +1498,7 @@ Parameter 1: lower 8 bits of current servo position value
 
 Parameter 2: higher 8 bits of current servo position value, no default
 
-Description: Returned the angular position value need to be converted to the “signed short int” type of data, because the read angle may be negative
+Description: Returned the angular position value need to be converted to the "signed short int" type of data, because the read angle may be negative
 
 **11\. Command name: SERVO_OR_MOTOR_MODE_READ Command value:30 Length: 7**
 
@@ -1648,7 +1650,7 @@ Wiring method: Connect the 7.4V lithium battery and the DC power line of the STM
 
 The example routine for this content is named "**EncoderMotor_PID_Demo**":
 
-Specific instructions for program download can be found in "**[2. STM32 Development Fundamentals / 2.3 Project Compilation and Download]()**" of the document. Simply replace the hex file mentioned in the document with the hex file generated from this example routine (EncoderMotor_PID_Demo.hex) for downloading.
+Specific instructions for program download can be found in "**[2. STM32 Development Fundamentals / 2.3 Project Compilation and Download](https://wiki.hiwonder.com/projects/ROS-Robot-Control-Board/en/latest/docs/2_STM32_Development_Fundamentals.html#project-compilation-download)**" of the document. Simply replace the hex file mentioned in the document with the hex file generated from this example routine (EncoderMotor_PID_Demo.hex) for downloading.
 
 ### 3.10.4 Program Outcome
 
@@ -1748,7 +1750,7 @@ The encoder motor is connected close to the USB-HOST port, with a RESET button n
 
 The example routine for this section is called '**EncoderMotor_PID_Demo**'.
 
-After downloading the program (specific downloading instructions can be found in "**[2. STM32 Development Fundamentals/2.3 Project Compilation and Download]()**"), press the RESET button to reset the microcontroller for the new program to start executing.
+After downloading the program (specific downloading instructions can be found in "**[2. STM32 Development Fundamentals/2.3 Project Compilation and Download](https://wiki.hiwonder.com/projects/ROS-Robot-Control-Board/en/latest/docs/2_STM32_Development_Fundamentals.html#project-compilation-download)**"), press the RESET button to reset the microcontroller for the new program to start executing.
 
 ### 3.11.4 Program Outcome
 
@@ -1758,7 +1760,7 @@ After powering on the STM32 control board, the motor runs in both slow and fast 
 
 <img class="common_img" src="../_static/media/chapter_3/section_11/media/image5.png" style="width:500px" />
 
-Open the serial assistant (located in "**[Appendix]()**"), find the serial port connected to the development board (may not necessarily be COM4, choose the appropriate COM based on actual connection), and configure it as shown below:
+Open the serial assistant (located in "**[Appendix](https://drive.google.com/drive/folders/1aXGtI4NxXUY_R-C1QPpTinZ5E3yDQ7kA?usp=sharing)**"), find the serial port connected to the development board (may not necessarily be COM4, choose the appropriate COM based on actual connection), and configure it as shown below:
 
 **Baud Rate = 115200;**
 
@@ -1808,7 +1810,7 @@ Derivative (D): The derivative part adjusts the output based on the rate of chan
 
 In motor PID control, the encoder is used to measure the actual motor position. The PID controller calculates based on the difference between the target position and the actual position, and outputs a control signal to control the motor's movement. The PID controller can adjust the control signal based on changes in the actual position to better control the motor's movement.
 
-For more information on PID principles, refer to "**[3. RosRobot Controller Program Analysis/3.11 RRC DC Brushed Motor PID Control and Source Code Analysis/PID Basic Learning](本章课程附件)**."
+For more information on PID principles, refer to "**[3. RosRobot Controller Program Analysis/3.11 RRC DC Brushed Motor PID Control and Source Code Analysis/PID Basic Learning](https://drive.google.com/drive/folders/1wMCM6pqnxcxhLWRqinE5B3NAuTmA_pP6?usp=sharing)**."
 
 * **Code Analysis**
 
@@ -1888,6 +1890,8 @@ In this context:
 
 \- Finally, the function stores the result in the 'output' field of the PID_ControllerTypeDef structure."
 
+<p id="anchor_3_12"></p>
+
 ## 3.12 RRC PS2 Controller USB Receiver Signal Processing Explanation and Source Code Analysis
 
 ### 3.12.1 PS2 Controller USB Receiver Signal Processing Principles
@@ -1898,7 +1902,7 @@ In the previous course "**Wireless Controller Usage**," you should have learned 
 
 The flow process of the PS2 controller sending information to the USB receiver, and then the USB receiver sending the data to the STM32 for processing:
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_1\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_12_1/media/image2.png" style="width:500px"  />
 
 1.  The PS2 controller sends commands wirelessly to the USB receiver.
 
@@ -1910,7 +1914,7 @@ The flow process of the PS2 controller sending information to the USB receiver, 
 
 * **Source Code Path**
 
-The source code for this section is located at “**[Appendix/Programs/PS2 Controller Signal Processing]()**” under “**Hiwonder/System**” in “**gampad_handle.c**” and “**app.c**”. You can also use Keil5 (refer to previous content for installation details) to open the project file. This can be found under “**Appendix/Programs/PS2 Controller Signal Processing**” in the “**MDK-ARM**” section on the left side of “**Hiwonder/System**”.
+The source code for this section is located at "**[Appendix/Programs/PS2 Controller Signal Processing](https://drive.google.com/drive/folders/1Ebhqdic1G7MTrq-KN6KckFSHEi7Ii7yx?usp=sharing)**" under "**Hiwonder/System**" in "**gampad_handle.c**" and "**app.c**". You can also use Keil5 (refer to previous content for installation details) to open the project file. This can be found under "**Appendix/Programs/PS2 Controller Signal Processing**" in the "**MDK-ARM**" section on the left side of "**Hiwonder/System**".
 
 * **Working Principle Analysis**
 
@@ -1918,11 +1922,11 @@ The source code for this section is located at “**[Appendix/Programs/PS2 Contr
 
 The controller sends information via DI, DO (data lines): When you operate the controller, such as pressing a button, the button information is encoded into an electrical signal and sent out through the data lines.
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_1\media\image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_1/media/image3.png" style="width:500px" />
 
 **2. Working Process of USB Receiver and STM32**
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_1\media\image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_1/media/image4.png" style="width:500px" />
 
 1. The USB receiver transmits the electrical signal received from the controller over differential signals on a pair of data lines (D+ and D-), then sends it to the STM32 for decoding.
 
@@ -1958,19 +1962,19 @@ In the previous lesson, we learned about the analysis of the principles behind t
 
 * **Program Storage Path**
 
-The source code implemented in this section is located in the '**[3.12 RRC PS2 Controller USB Receiver Reception and Processing Routine/ rosrobotcontrollerm4_motor_ps2](本章节附件)**' of Hiwonder/System's 'gampad_handle.c' and 'usbh_hid_gamepad.h'. To open the project files, use Keil5 (for specific installation instructions, please refer to the previous content).
+The source code implemented in this section is located in the '**[3.12 RRC PS2 Controller USB Receiver Reception and Processing Routine/ rosrobotcontrollerm4_motor_ps2](https://drive.google.com/drive/folders/1snmZQovbk0a4gumk_EQ5ssLzRWAznHWO?usp=sharing)**' of Hiwonder/System's 'gampad_handle.c' and 'usbh_hid_gamepad.h'. To open the project files, use Keil5 (for specific installation instructions, please refer to the previous content).
 
 * **Define the Relevant Structures for USB HID Gamepad**
 
 **1. HID_GAMEPAsD_Info_TypeDef Structure**
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_2\media\image2.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_2/media/image2.png" style="width:300px" />
 
 Defined a set of buttons, a switch, as well as the X and Y coordinates of the left and right joysticks.
 
 **2. SBH_HID_GamepadInit and USBH_HID_GetGamepadInfo Function**
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_2\media\image3.png" style="width:700px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_2/media/image3.png" style="width:700px" />
 
 `USBH_HID_GamepadInit` is used to initialize data related to the gamepad.
 
@@ -1978,7 +1982,7 @@ Defined a set of buttons, a switch, as well as the X and Y coordinates of the le
 
 **3. Defined Masks Representing Each Button on the Gamepad**
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_2\media\image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_2/media/image4.png" style="width:500px" />
 
 Defined masks representing various buttons on the gamepad, such as L2, R2, SELECT, START, and others.
 
@@ -1988,7 +1992,7 @@ Defined masks representing various buttons on the gamepad, such as L2, R2, SELEC
 
  **1. Import Header File**
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_2\media\image5.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_2/media/image5.png" style="width:500px" />
 
 USB host (usb_host.h and usbh_core.h).
 
@@ -2000,7 +2004,7 @@ ATC_THRESHOLD defines the threshold for analog joysticks, used to determine if j
 
 **2. A_T_C Function**
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_2\media\image6.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_2/media/image6.png" style="width:500px" />
 
 This is used to handle inputs from analog joysticks, returning a character representing the direction based on the joystick's x and y coordinates.
 
@@ -2008,7 +2012,7 @@ It checks if the x coordinate exceeds the set threshold, then checks if the y co
 
 **3. USBH_HID_EventCallback Function**
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_2\media\image7.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_2/media/image7.png" style="width:500px" />
 
 `USBH_HID_EventCallback` is a callback function of the USB host library.
 
@@ -2018,7 +2022,7 @@ If the device type is a gamepad (0xFF), it retrieves information from the gamepa
 
 **4. USBH_HID_GetDeviceType(phost)**
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_2\media\image8.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_2/media/image8.png" style="width:500px" />
 
 This program checks the type of device.
 
@@ -2028,7 +2032,7 @@ If a gamepad's information is obtained using `USBH_HID_GetGamepadInfo(phost)`, i
 
 **5. Check info-\>hat Status**
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_2\media\image9.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_2/media/image9.png" style="width:500px" />
 
 This segment of the program is used to handle the gamepad's directional keys:
 
@@ -2036,17 +2040,17 @@ By checking the status of info-\>hat, it determines whether the gamepad's direct
 
 **6. A_T_C(info-\>lx, info-\>ly) Function**
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_2\media\image10.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_2/media/image10.png" style="width:500px" />
 
 The above image shows a portion of the program for the gamepad's joysticks.
 
 The function A_T_C(info-\>lx, info-\>ly) is called to convert the x and y coordinates of the joystick into a character representing the direction. If the joystick is not moved, the returned character will be 'I', and in this case, there is no need to send a message to the message queue. If the joystick is moved, the character representing the direction is sent to the message queue (as shown below).
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_2\media\image11.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_2/media/image11.png" style="width:500px" />
 
 **7. last_button Handles Gamepad Buttons**
 
-<img class="common_img" src="../_static/media/chapter_3\section_12_2\media\image12.png" style="width:700px" />
+<img class="common_img" src="../_static/media/chapter_3/section_12_2/media/image12.png" style="width:700px" />
 
 The above image shows a portion of the program for the gamepad buttons.
 
@@ -2054,7 +2058,7 @@ For each button on the gamepad, it checks whether it is pressed. If a button is 
 
 Finally, the function copies the current gamepad information to last_info for use in the next call.
 
-## 3.13 **RRC Flight Control SBUS Reception Principle and Source Code Analysis**
+## 3.13 RRC Flight Control SBUS Reception Principle and Source Code Analysis
 
 ### 3.13.1 Program Logic
 
@@ -2070,7 +2074,7 @@ The hardware connection diagram of the flight controller receiver is as follows:
 
 ### 3.13.3 Program Download
 
-The example routine for this section is '**[3.13 RRC Flight Control SBUS Reception Routines/（Corresponding Car Model）/RosRobotCOntrollerM4_SBUS_AirplaneSystem](本章节附件)**'. You need to burn the program according to the corresponding chassis type.
+The example routine for this section is '**[3.13 RRC Flight Control SBUS Reception Routines/ (Corresponding Car Model)/RosRobotCOntrollerM4_SBUS_AirplaneSystem](https://drive.google.com/drive/folders/1hSvc3X6PYxYulHnlwtv0HNyeOJnHO2KR?usp=sharing)**'. You need to burn the program according to the corresponding chassis type.
 
 ### 3.13.4 Program Outcome
 
@@ -2110,7 +2114,7 @@ The flight controller receiver communicates with the development board via the S
 
 ###  3.13.6 Source Code Analysis
 
-The program source code for this session is located in '**[3.13 RRC Flight Control SBUS Reception Principle and Source Code Analysis / RosRobotControllerM4_SBUS_AirplaneSystem](本章节附件)**'. The program framework is designed according to the functionality as shown in the diagram below. The analysis mainly focuses on the '**Hiwonder/Misc/sbus.c**' file and the '**Hiwonder/Porting/sbus_porting.c**' file.
+The program source code for this session is located in '**[3.13 RRC Flight Control SBUS Reception Principle and Source Code Analysis / RosRobotControllerM4_SBUS_AirplaneSystem](https://drive.google.com/drive/folders/1hSvc3X6PYxYulHnlwtv0HNyeOJnHO2KR?usp=sharing)**'. The program framework is designed according to the functionality as shown in the diagram below. The analysis mainly focuses on the '**Hiwonder/Misc/sbus.c**' file and the '**Hiwonder/Porting/sbus_porting.c**' file.
 
 <img class="common_img" src="../_static/media/chapter_3/section_13/media/image7.png" style="width:500px"  />
 
@@ -2150,7 +2154,7 @@ The specific function is as below:
 
 After the SBUS reception task parses the data, it passes the values to the flight controller data processing function `deal_SbusData()`. This function converts the changing values into corresponding motion control command values (these command values are the same as those for gamepad control and Bluetooth control) and sends them to the motion control function through a queue.
 
-（1）Process the Joystick Value
+ (1)Process the Joystick Value
 
 The midpoint value of the joystick is 992, with a range of \[192, 1792\]. The joystick has two data points: one for horizontal and one for vertical movement. When the vertical joystick value is greater than 1400 or less than 600, it is considered to be tilted left or right, requiring the vehicle to perform the corresponding movement. The corresponding motion command is then sent to the moving_ctrl_queueHandle queue using the `osMessageQueuePut()` function. Upon receiving the command, the motion control task will control the vehicle accordingly.
 
@@ -2162,7 +2166,7 @@ The right joystick controls the pan-tilt movement, and toggle switch three provi
 
 <img class="common_img" src="../_static/media/chapter_3/section_13/media/image12.png" style="width:700px" />
 
-（2）Processing Toggle Values
+ (2)Processing Toggle Values
 
 When toggle one is flipped up (value of 192), the buzzer sounds once every 100 counts to create an intermittent beeping effect. When toggle one is flipped down, it beeps once and stores the current value. If the stored value matches the current value, it indicates that the beep has already sounded once, so the beep action command should be skipped.
 
@@ -2178,7 +2182,9 @@ The `app_task_entry()` function in the app.c file is the entry point for the mot
 
 Its content is the same as that of the gamepad remote control. Please refer to
 
-'**[Lesson 12 RRC PS2 Controller USB Receiver Signal Processing Explanation and Source Code Analysis]()**"
+'**[Lesson 12 RRC PS2 Controller USB Receiver Signal Processing Explanation and Source Code Analysis](#anchor_3_12)**"
+
+<p id="anchor_3_14"></p>
 
 ## 3.14 RRC Communication Protocol with the Host Computer Analysis
 
@@ -2196,7 +2202,7 @@ Instruction format:
 
 | Frame Header |    Function Code    |    Data Length    | Parameter |    Checksum     |
 | :----------: | :-----------------: | :---------------: | :-------: | :-------------: |
-|  0xAA 0x55   | （uint8_t）Function | （uint8_t）Length |   Data    | （uint8_t） CRC |
+|  0xAA 0x55   |  (uint8_t)Function |  (uint8_t)Length |   Data    |  (uint8_t) CRC |
 
 1. Frame Header: Continuous reception of 0xAA, 0x55 indicates the arrival of a data packet.
 
@@ -2216,8 +2222,7 @@ The development board already has a dedicated UART to USB circuit, so communicat
 
 | Frame Header |  Function Code  | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_LED |      7      | Parameter 1:（uint8_t）led_id<br />Parameter 2:（uint16_t）light-on duration(ms)<br />Parameter 3:（uint16_t）light-off duration(ms)<br />Parameter 4:（uint16_t）number of cycles |   CRC    |
-
+|  0xAA  0x55  | PACKET_FUNC_LED |      7      | Parameter 1: (uint8_t)led_id<br />Parameter 2: (uint16_t)light-on duration(ms)<br />Parameter 3: (uint16_t)light-off duration(ms)<br />Parameter 4: (uint16_t)number of cycles |   CRC    |
 
 Example:
 
@@ -2225,7 +2230,7 @@ Example:
 
 | Frame Header | Function Code   | Data Length |                          Parameter                           | Checksum |
 | :----------: | --------------- | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_LED |      7      | Parameter 1: 0x01（1）<br />Parameter 2: 0x64 0x00（100）<br />Parameter 3: 0x64 0x00（100）<br />Parameter 4: 0x05 0x00（5） |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_LED |      7      | Parameter 1: 0x01 (1)<br />Parameter 2: 0x64 0x00 (100)<br />Parameter 3: 0x64 0x00 (100)<br />Parameter 4: 0x05 0x00 (5) |   CRC    |
 
 > [!NOTE]
 >
@@ -2235,13 +2240,13 @@ Example:
 
 | Frame Header | Function Code   | Data Length |                          Parameter                           | Checksum |
 | ------------ | --------------- | :---------: | :----------------------------------------------------------: | :------: |
-| 0xAA  0x55   | PACKET_FUNC_LED |      7      | Parameter 1：0x01（1）<br />Parameter 2：0xF4 0x01（500）<br />Parameter 3：0x2C 0x01（300）<br />Parameter 4：0x0A 0x00（10） |   CRC    |
+| 0xAA  0x55   | PACKET_FUNC_LED |      7      | Parameter 1：0x01 (1)<br />Parameter 2：0xF4 0x01 (500)<br />Parameter 3：0x2C 0x01 (300)<br />Parameter 4：0x0A 0x00 (10) |   CRC    |
 
 **2. Buzzer control: Instruction name PACKET_FUNC_BUZZER, value 2**
 
 | Frame Header |   Function Code    | Data Length |                          Parameter                           | Checksum |
 | :----------: | :----------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUZZER |      8      | Parameter 1：（uint16_t）frequency (Hz)<br />Parameter 2：（uint16_t）beeping duration(ms)<br />Parameter 3：（uint16_t）no-beeping duration(ms)<br />Parameter 4：（uint16_t）number of cycles |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUZZER |      8      | Parameter 1： (uint16_t)frequency (Hz)<br />Parameter 2： (uint16_t)beeping duration(ms)<br />Parameter 3： (uint16_t)no-beeping duration(ms)<br />Parameter 4： (uint16_t)number of cycles |   CRC    |
 
 Example：
 
@@ -2249,13 +2254,13 @@ Example：
 
 | Frame Header |   Function Code    | Data Length |                          Parameter                           | Checksum |
 | :----------: | :----------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUZZER |      8      | Parameter 1：0x78 0x05（1400）<br />Parameter 2：0x64 0x00（100）<br />Parameter 3：0x64 0x00（100）<br />Parameter 4：0x05 0x00（5） |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUZZER |      8      | Parameter 1：0x78 0x05 (1400)<br />Parameter 2：0x64 0x00 (100)<br />Parameter 3：0x64 0x00 (100)<br />Parameter 4：0x05 0x00 (5) |   CRC    |
 
 (2) Control the buzzer to sound 10 times, with a frequency of 1000Hz, each lasting for 500ms followed by a 300ms pause.
 
 | Frame Header |   Function Code    | Data Length |                          Parameter                           | Checksum |
 | ------------ | :----------------: | :---------: | :----------------------------------------------------------: | -------- |
-| 0xAA  0x55   | PACKET_FUNC_BUZZER |      8      | Parameter 1：0xE8 0x03（1000）<br />Parameter 2：0xF4 0x01（500）<br />Parameter 3：0x2C 0x01（300）<br />Parameter 4：0x0A 0x00（10） | CRC      |
+| 0xAA  0x55   | PACKET_FUNC_BUZZER |      8      | Parameter 1：0xE8 0x03 (1000)<br />Parameter 2：0xF4 0x01 (500)<br />Parameter 3：0x2C 0x01 (300)<br />Parameter 4：0x0A 0x00 (10) | CRC      |
 
 **3. Encoder motor control: Instruction name PACKET_FUNC_MOTOR, value 3**
 
@@ -2263,7 +2268,7 @@ Example：
 
 | Frame Header |   Function Code   | Data Length |                          Parameter                           | Checksum |
 | :----------: | :---------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_MOTOR |      6      | Parameter 1：（uint8_t）0x00（subcommand）<br />Parameter 2：（uint8_t）motor_id<br />Parameter 3：（float）speed value（positive and negative） |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_MOTOR |      6      | Parameter 1： (uint8_t)0x00 (subcommand)<br />Parameter 2： (uint8_t)motor_id<br />Parameter 3： (float)speed value (positive and negative) |   CRC    |
 
 (Note: float type is 4 bytes)
 
@@ -2271,13 +2276,13 @@ Example: Control motor 1 to rotate at -1r/s speed:
 
 | Frame Header |   Function Code   | Data Length |                          Parameter                           | Checksum |
 | :----------: | :---------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_MOTOR |      6      | Parameter 1：0x00Parameter 2：0x01<br />Parameter 3：0x00 0x00 0x80 0xBF（-1） |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_MOTOR |      6      | Parameter 1：0x00Parameter 2：0x01<br />Parameter 3：0x00 0x00 0x80 0xBF (-1) |   CRC    |
 
 **(2) Control Multiple Motors**
 
 | Frame Header | Function Code     | Data Length | Parameter                                                    | Checksum |
 | ------------ | ----------------- | ----------- | ------------------------------------------------------------ | -------- |
-| 0xAA  0x55   | PACKET_FUNC_MOTOR | 5N+2        | Parameter 1：（uint8_t）0x01（subcommand）<br />Parameter 2：（uint8_t）motor quantity<br />Parameter 3：（uint8_t）motor_id_1<br />Parameter 4：（float）speed _1······<br />Parameter 2N+1：（uint8_t）motor_id_N<br />Parameter 2N+2：（float）speed _N（Format reference parameters 3, 4） | CRC      |
+| 0xAA  0x55   | PACKET_FUNC_MOTOR | 5N+2        | Parameter 1： (uint8_t)0x01 (subcommand)<br />Parameter 2： (uint8_t)motor quantity<br />Parameter 3： (uint8_t)motor_id_1<br />Parameter 4： (float)speed _1······<br />Parameter 2N+1： (uint8_t)motor_id_N<br />Parameter 2N+2： (float)speed _N (Format reference parameters 3, 4) | CRC      |
 
 (Note: float type is 4 bytes)
 
@@ -2287,13 +2292,13 @@ Control motor 1 and motor 2 to rotate at speeds of -1r/s and 2r/s respectively:
 
 | Frame Header |   Function Code   | Data Length |                          Parameter                           | Checksum |
 | :----------: | :---------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_MOTOR |     12      | Parameter 1：0x01（subcommand）<br />Parameter 2：0x02<br />Parameter 3：0x01<br />Parameter 4：0x00 0x00 0x80 0xBF（-1）<br />Parameter 5：0x02<br />Parameter 6：0x00 0x00 0x00 0x40（+2） |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_MOTOR |     12      | Parameter 1：0x01 (subcommand)<br />Parameter 2：0x02<br />Parameter 3：0x01<br />Parameter 4：0x00 0x00 0x80 0xBF (-1)<br />Parameter 5：0x02<br />Parameter 6：0x00 0x00 0x00 0x40 (+2) |   CRC    |
 
 **(3) Control Single Motor to Stop**
 
 | Frame Header |   Function Code   | Data Length |                          Parameter                           | Checksum |
 | :----------: | :---------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_MOTOR |      2      | Parameter 1：（uint8_t）0x02（subcommand）<br />Parameter 2：（uint8_t）motor_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_MOTOR |      2      | Parameter 1： (uint8_t)0x02 (subcommand)<br />Parameter 2： (uint8_t)motor_id |   CRC    |
 
 Example:
 
@@ -2301,13 +2306,13 @@ Control motor 1 to stop:
 
 | Frame Header |   Function Code   | Data Length |                       Parameter                        | Checksum |
 | :----------: | :---------------: | :---------: | :----------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_MOTOR |      2      | Parameter 1：0x02（subcommand）<br />Parameter 2：0x01 |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_MOTOR |      2      | Parameter 1：0x02 (subcommand)<br />Parameter 2：0x01 |   CRC    |
 
 **(4) Control several motors to stop:**
 
 | Frame Header |   Function Code   | Data Length |                          Parameter                           | Checksum |
 | :----------: | :---------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_MOTOR |      2      | Parameter 1：（uint8_t）0x03（subcommand）<br />Parameter 2：（uint8_t）motor mask |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_MOTOR |      2      | Parameter 1： (uint8_t)0x03 (subcommand)<br />Parameter 2： (uint8_t)motor mask |   CRC    |
 
 Example:
 
@@ -2315,7 +2320,7 @@ Control motor 0 and motor 2 to stop:
 
 | Frame Header | Function Code     | Data Length |                          Parameter                           | Checksum |
 | ------------ | ----------------- | :---------: | :----------------------------------------------------------: | :------: |
-| 0xAA  0x55   | PACKET_FUNC_MOTOR |      2      | Parameter 1：0x03（mode）<br />Parameter 2：0x05（Binary 00000101） |   CRC    |
+| 0xAA  0x55   | PACKET_FUNC_MOTOR |      2      | Parameter 1：0x03 (mode)<br />Parameter 2：0x05 (Binary 00000101) |   CRC    |
 
 **4. PWM servo control：instruction name PACKET_FUNC_PWM_SERVO，value 4**
 
@@ -2323,19 +2328,19 @@ Control motor 0 and motor 2 to stop:
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |    3N+3     | Parameter 1：（uint8_t）0x01（subcommand）<br />Parameter 2：（uint16_t）motion time(ms)<br />Parameter 3：（uint8_t）servo_id_1<br />Parameter 4：（uint16_t）pulse width······<br />Parameter 2N+1：（uint8_t）servo_id_N<br />Parameter 2N+2：（uint16_t）pulse width |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |    3N+3     | Parameter 1： (uint8_t)0x01 (subcommand)<br />Parameter 2： (uint16_t)motion time(ms)<br />Parameter 3： (uint8_t)servo_id_1<br />Parameter 4： (uint16_t)pulse width······<br />Parameter 2N+1： (uint8_t)servo_id_N<br />Parameter 2N+2： (uint16_t)pulse width |   CRC    |
 
 Example: Control servo 1 and servo 2 to rotate to 90° and 180° respectively, corresponding to pulse widths of 1500 and 2500, within 2 seconds:
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      9      | Parameter 1：0x01（subcommand）<br />Parameter 2：0xD0 0x07（2000）<br />Parameter 3：0x01（1）<br />Parameter 4：0xDC 0x05（1500）<br />Parameter 5：0x02（2）<br />Parameter 6：0xC4 0x09（2500） |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      9      | Parameter 1：0x01 (subcommand)<br />Parameter 2：0xD0 0x07 (2000)<br />Parameter 3：0x01 (1)<br />Parameter 4：0xDC 0x05 (1500)<br />Parameter 5：0x02 (2)<br />Parameter 6：0xC4 0x09 (2500) |   CRC    |
 
 **(2) Control single PWM servo**
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      6      | Parameter 1：（uint8_t）0x03（subcommand）<br />Parameter 2：（uint16_t）motion time(ms)<br />Parameter 3：（uint8_t）servo_id<br />Parameter 4：（uint16_t）pulse width |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      6      | Parameter 1： (uint8_t)0x03 (subcommand)<br />Parameter 2： (uint16_t)motion time(ms)<br />Parameter 3： (uint8_t)servo_id<br />Parameter 4： (uint16_t)pulse width |   CRC    |
 
 The pulse width ranges from \[500, 2500\], corresponding to \[0°, 180°\].
 
@@ -2345,13 +2350,13 @@ Control servo 1 to rotate to the 90° position within 1 second, with a pulse wid
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      6      | Parameter 1：0x03（subcommand）<br />Parameter 2：0xE8 0x03（1000）<br />Parameter 3：0x01（1）<br />Parameter 4：0xDC 0x05（1500） |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      6      | Parameter 1：0x03 (subcommand)<br />Parameter 2：0xE8 0x03 (1000)<br />Parameter 3：0x01 (1)<br />Parameter 4：0xDC 0x05 (1500) |   CRC    |
 
 **(3) Read PWM servo position**
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      2      | Parameter 1：（uint8_t）0x05（subcommand）<br />Parameter 2：（uint8_t）servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      2      | Parameter 1： (uint8_t)0x05 (subcommand)<br />Parameter 2： (uint8_t)servo_id |   CRC    |
 
 After sending the command to read the position, the control board will send the position data of the corresponding PWM servo with the ID to the host computer.
 
@@ -2359,7 +2364,7 @@ After sending the command to read the position, the control board will send the 
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      3      | Parameter 1：（uint8_t）0x07（subcommand）<br />Parameter 2：（uint8_t）servo_id<br />Parameter 3：（uint8_t）deviation parameter（Convert to int8_t type, valid range is -100 to +100） |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      3      | Parameter 1： (uint8_t)0x07 (subcommand)<br />Parameter 2： (uint8_t)servo_id<br />Parameter 3： (uint8_t)deviation parameter (Convert to int8_t type, valid range is -100 to +100) |   CRC    |
 
 Example:
 
@@ -2367,13 +2372,13 @@ Set the offset of servo 2 to +10
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      3      | Parameter 1：0x07（subcommand）<br />Parameter 2：0x02（2）<br />Parameter 3：0x0A（10） |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      3      | Parameter 1：0x07 (subcommand)<br />Parameter 2：0x02 (2)<br />Parameter 3：0x0A (10) |   CRC    |
 
 **(5) Read PWM Servo Deviation**
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      2      | Parameter 1：（uint8_t）0x09（subcommand）<br />Parameter 2：（uint8_t）servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      2      | Parameter 1： (uint8_t)0x09 (subcommand)<br />Parameter 2： (uint8_t)servo_id |   CRC    |
 
 After sending the command to read the position, the control board will send the offset data of the corresponding PWM servo with the ID to the host computer.
 
@@ -2383,7 +2388,7 @@ After sending the command to read the position, the control board will send the 
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |    3N+4     | Parameter 1：（uint8_t）0x01（subcommand）<br />Parameter 2：（uint16_t）motion time(ms)<br />Parameter 3：（uint8_t）servo quantity<br />Parameter 4：（uint8_t）servo_id_1<br />Parameter 5：（uint16_t）Pulse width······<br />Parameter 2N+1：（uint8_t）servo_id_N<br />Parameter 2N+2：（uint16_t）Pulse width |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |    3N+4     | Parameter 1： (uint8_t)0x01 (subcommand)<br />Parameter 2： (uint16_t)motion time(ms)<br />Parameter 3： (uint8_t)servo quantity<br />Parameter 4： (uint8_t)servo_id_1<br />Parameter 5： (uint16_t)Pulse width······<br />Parameter 2N+1： (uint8_t)servo_id_N<br />Parameter 2N+2： (uint16_t)Pulse width |   CRC    |
 
 Example:
 
@@ -2391,13 +2396,13 @@ Control bus servo 1 and servo 2 to rotate to 200° and 240° respectively, corre
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |     10      | Parameter 1：0x01（subcommand）<br />Parameter 2：0xE8 0x03（1000）<br />Parameter 3：0x02（2）<br />Parameter 4：0x01（1）<br />Parameter 5：0x41 0x03（833）<br />Parameter 4：0x02（2）<br />Parameter 5：0xE8 0x03（1000） |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |     10      | Parameter 1：0x01 (subcommand)<br />Parameter 2：0xE8 0x03 (1000)<br />Parameter 3：0x02 (2)<br />Parameter 4：0x01 (1)<br />Parameter 5：0x41 0x03 (833)<br />Parameter 4：0x02 (2)<br />Parameter 5：0xE8 0x03 (1000) |   CRC    |
 
 **(2) Read position command**
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1：（uint8_t）0x05（subcommand）<br />Parameter 2：（uint8_t）servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1： (uint8_t)0x05 (subcommand)<br />Parameter 2： (uint8_t)servo_id |   CRC    |
 
 After sending the command to read the position, the control board will send the position data of the corresponding bus servo with the ID to the host computer.
 
@@ -2405,7 +2410,7 @@ After sending the command to read the position, the control board will send the 
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1：（uint8_t）0x07（subcommand）<br />Parameter 2：（uint8_t）servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1： (uint8_t)0x07 (subcommand)<br />Parameter 2： (uint8_t)servo_id |   CRC    |
 
 After sending the command to read the input voltage, the control board will send the input voltage data of the corresponding bus servo with the ID to the host computer.
 
@@ -2413,7 +2418,7 @@ After sending the command to read the input voltage, the control board will send
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1：（uint8_t）0x09（subcommand）<br />Parameter 2：（uint8_t）servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1： (uint8_t)0x09 (subcommand)<br />Parameter 2： (uint8_t)servo_id |   CRC    |
 
 After sending the command to read the temperature, the control board will send the temperature data of the corresponding bus servo with the ID to the host computer.
 
@@ -2421,7 +2426,7 @@ After sending the command to read the temperature, the control board will send t
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1：（uint8_t）0x0B（subcommand）<br />Parameter2：（uint8_t）servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1： (uint8_t)0x0B (subcommand)<br />Parameter2： (uint8_t)servo_id |   CRC    |
 
 After sending the command to unload power, the control board will unload the power of the corresponding bus servo with the ID.
 
@@ -2429,7 +2434,7 @@ After sending the command to unload power, the control board will unload the pow
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1：（uint8_t）0x0C（subcommand）<br />Parameter 2：（uint8_t）servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1： (uint8_t)0x0C (subcommand)<br />Parameter 2： (uint8_t)servo_id |   CRC    |
 
 After sending the command to load power, the control board will load power to the corresponding bus servo with the ID.
 
@@ -2437,7 +2442,7 @@ After sending the command to load power, the control board will load power to th
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      3      | Parameter1:（uint8_t）0x10（subcommand）<br />Parameter 2:（uint8_t）servo_id<br />Parameter3:（uint8_t）save_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      3      | Parameter1: (uint8_t)0x10 (subcommand)<br />Parameter 2: (uint8_t)servo_id<br />Parameter3: (uint8_t)save_id |   CRC    |
 
 After sending the ID write command, the control board will overwrite the ID number of the corresponding bus servo.
 
@@ -2445,7 +2450,7 @@ After sending the ID write command, the control board will overwrite the ID numb
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter1：（uint8_t）0x12（subcommand）<br />Parameter2：（uint8_t）0xFE（Broadcast Query） |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter1： (uint8_t)0x12 (subcommand)<br />Parameter2： (uint8_t)0xFE (Broadcast Query) |   CRC    |
 
 After sending the ID read command, the control board will upload the ID number of the bus servo to the host computer.
 
@@ -2457,7 +2462,7 @@ After sending the ID read command, the control board will upload the ID number o
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      3      | Parameter 1：（uint8_t）0x20（subcommand）<br />Parameter 2：（uint8_t）servo_id<br />Parameter 3：（uint8_t）deviation adjustment value |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      3      | Parameter 1： (uint8_t)0x20 (subcommand)<br />Parameter 2： (uint8_t)servo_id<br />Parameter 3： (uint8_t)deviation adjustment value |   CRC    |
 
 After sending the offset adjustment command, the control board will set the offset value of the corresponding bus servo with the value of parameter 3.
 
@@ -2465,7 +2470,7 @@ After sending the offset adjustment command, the control board will set the offs
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1：（uint8_t）0x22（subcommand）<br />Parameter 2：（uint8_t）servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1： (uint8_t)0x22 (subcommand)<br />Parameter 2： (uint8_t)servo_id |   CRC    |
 
 After sending the offset read command, the control board will read the offset value of the corresponding bus servo and upload it to the host computer.
 
@@ -2473,7 +2478,7 @@ After sending the offset read command, the control board will read the offset va
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1：（uint8_t）0x24（subcommand）<br />Parameter 2：（uint8_t）servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1： (uint8_t)0x24 (subcommand)<br />Parameter 2： (uint8_t)servo_id |   CRC    |
 
 After sending the offset save command, the control board will enable the corresponding bus servo with the ID to save its current offset value.
 
@@ -2481,7 +2486,7 @@ After sending the offset save command, the control board will enable the corresp
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      6      | Parameter 1：（uint8_t）0x30（subcommand）<br />Parameter 2：（uint8_t）servo_id<br />Parameter 3：（uint16_t）lower limit<br />Parameter 4：（uint16_t）higher limit |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      6      | Parameter 1： (uint8_t)0x30 (subcommand)<br />Parameter 2： (uint8_t)servo_id<br />Parameter 3： (uint16_t)lower limit<br />Parameter 4： (uint16_t)higher limit |   CRC    |
 
 The numerical range of the limit is \[0, 1000\].
 
@@ -2491,7 +2496,7 @@ After sending the position limit setting command, the control board will set the
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1：（uint8_t）0x32（subcommand）<br />Parameter 2：（uint8_t）servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1： (uint8_t)0x32 (subcommand)<br />Parameter 2： (uint8_t)servo_id |   CRC    |
 
 After sending the position limit read command, the control board will upload the limit parameters of the corresponding bus servo to the host computer.
 
@@ -2499,7 +2504,7 @@ After sending the position limit read command, the control board will upload the
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      6      | Parameter 1：（uint8_t）0x34（subcommand）<br />Parameter  2：（uint8_t）servo_id<br />Parameter 3：（uint16_t）lower limit<br />Parameter 4：（uint16_t）higher limit |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      6      | Parameter 1： (uint8_t)0x34 (subcommand)<br />Parameter  2： (uint8_t)servo_id<br />Parameter 3： (uint16_t)lower limit<br />Parameter 4： (uint16_t)higher limit |   CRC    |
 
 The low voltage limit value should be greater than 4500, and the high voltage limit value should be less than 14000.
 
@@ -2509,7 +2514,7 @@ After sending the voltage limit setting command, the control board will set the 
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1：（uint8_t）0x36（subcommand）<br />Parameter 2：（uint8_t）servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1： (uint8_t)0x36 (subcommand)<br />Parameter 2： (uint8_t)servo_id |   CRC    |
 
 After sending the voltage limit read command, the control board will upload the voltage limit parameters of the corresponding bus servo to the host computer.
 
@@ -2517,7 +2522,7 @@ After sending the voltage limit read command, the control board will upload the 
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      3      | Parameter 1：（uint8_t）0x38（subcommand）<br />Parameter 2：（uint8_t）servo_id<br />Parameter 3：（uint8_t）high temperature threshold |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      3      | Parameter 1： (uint8_t)0x38 (subcommand)<br />Parameter 2： (uint8_t)servo_id<br />Parameter 3： (uint8_t)high temperature threshold |   CRC    |
 
 The parameter value for the high-temperature threshold should be less than 100.
 
@@ -2527,7 +2532,7 @@ After sending the temperature limit setting command, the control board will set 
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1：（uint8_t）0x3A（subcommand）<br />Parameter 2：（uint8_t）servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      2      | Parameter 1： (uint8_t)0x3A (subcommand)<br />Parameter 2： (uint8_t)servo_id |   CRC    |
 
 After sending the temperature limit setting command, the control board will upload the high-temperature threshold parameter of the corresponding bus servo to the host computer.
 
@@ -2539,7 +2544,7 @@ After sending the temperature limit setting command, the control board will uplo
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      5      | Parameter 1：（uint8_t）servo_id<br />Parameter 2：（uint8_t）0x05（subcommand）<br />Parameter 3：（int8_t）Was the read successful?（0：success；-1：fail）<br />Parameter 4：（int16_t）servo position |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      5      | Parameter 1： (uint8_t)servo_id<br />Parameter 2： (uint8_t)0x05 (subcommand)<br />Parameter 3： (int8_t)Was the read successful? (0：success；-1：fail)<br />Parameter 4： (int16_t)servo position |   CRC    |
 
 When a read command is received, the corresponding servo's position parameter is read and uploaded to the host computer.
 
@@ -2549,13 +2554,13 @@ The angle of servo 5 is uploaded as 30°, corresponding to a pulse width of 833:
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      5      | Parameter 1：0x05（5）<br />Parameter 2：0x05（subcommand）<br />Parameter 3：0x00（0）<br />Parameter 4：0x41 0x03（833） |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      5      | Parameter 1：0x05 (5)<br />Parameter 2：0x05 (subcommand)<br />Parameter 3：0x00 (0)<br />Parameter 4：0x41 0x03 (833) |   CRC    |
 
 **(2) Bus Servo Voltage Upload**
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      5      | Parameter 1：（uint8_t）servo_id<br />Parameter 2：（uint8_t）0x07（subcommand）<br />Parameter 3：（int8_t）Was the read successful?（0：success；-1：fail）Parameter 4：（uint16_t） servo voltage |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      5      | Parameter 1： (uint8_t)servo_id<br />Parameter 2： (uint8_t)0x07 (subcommand)<br />Parameter 3： (int8_t)Was the read successful? (0：success；-1：fail)Parameter 4： (uint16_t) servo voltage |   CRC    |
 
 When a read command is received, the voltage parameter of the corresponding servo is read and uploaded to the host computer.
 
@@ -2563,7 +2568,7 @@ When a read command is received, the voltage parameter of the corresponding serv
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      4      | Parameter 1：（uint8_t）servo_id<br />Parameter 2：（uint8_t）0x09（subcommand）<br />Parameter 3：（int8_t）Was the reading successful（0：success；-1：fail）<br />Parameter 4：（uint8_t）servo temperature |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      4      | Parameter 1： (uint8_t)servo_id<br />Parameter 2： (uint8_t)0x09 (subcommand)<br />Parameter 3： (int8_t)Was the reading successful (0：success；-1：fail)<br />Parameter 4： (uint8_t)servo temperature |   CRC    |
 
 When a read command is received, the temperature parameter of the corresponding servo is read and uploaded to the host computer.
 
@@ -2571,7 +2576,7 @@ When a read command is received, the temperature parameter of the corresponding 
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      4      | Parameter 1：（uint8_t）0xFE（broadcast command）<br />Parameter 2：（uint8_t）0x12（subcommand）<br />Parameter 3：（int8_t）Was the reading successful（0：success；-1：fail）<br />Parameter 4：（uint8_t）read servo_id |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      4      | Parameter 1： (uint8_t)0xFE (broadcast command)<br />Parameter 2： (uint8_t)0x12 (subcommand)<br />Parameter 3： (int8_t)Was the reading successful (0：success；-1：fail)<br />Parameter 4： (uint8_t)read servo_id |   CRC    |
 
 When a read command is received, the ID number of the servo is read and uploaded to the host computer.
 
@@ -2579,7 +2584,7 @@ When a read command is received, the ID number of the servo is read and uploaded
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      4      | Parameter 1：（uint8_t）0xFE（previous broadcast command）<br />Parameter 2：（uint8_t）0x22（subcommand）<br />Parameter 3：（int8_t）Was the reading successful（0：success；-1：fail）<br />Parameter 4：（uint8_t）servo deviation |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      4      | Parameter 1： (uint8_t)0xFE (previous broadcast command)<br />Parameter 2： (uint8_t)0x22 (subcommand)<br />Parameter 3： (int8_t)Was the reading successful (0：success；-1：fail)<br />Parameter 4： (uint8_t)servo deviation |   CRC    |
 
 When a read command is received, the deviation parameter of the corresponding servo is read and uploaded to the host computer.
 
@@ -2587,7 +2592,7 @@ When a read command is received, the deviation parameter of the corresponding se
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      7      | Parameter 1：（uint8_t）servo_id<br />Parameter 2：（uint8_t）0x32（subcommand）<br />Parameter 3：（int8_t）Was the reading successful（0：success；-1：fail）<br />Parameter 4：（uint16_t）lower limitParameter 5：（uint16_t）higher limit |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      7      | Parameter 1： (uint8_t)servo_id<br />Parameter 2： (uint8_t)0x32 (subcommand)<br />Parameter 3： (int8_t)Was the reading successful (0：success；-1：fail)<br />Parameter 4： (uint16_t)lower limitParameter 5： (uint16_t)higher limit |   CRC    |
 
 When a read command is received, the position limit parameters of the corresponding servo are read and uploaded to the host computer.
 
@@ -2595,7 +2600,7 @@ When a read command is received, the position limit parameters of the correspond
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      7      | Parameter 1：（uint8_t）servo_id<br />Parameter 2：（uint8_t）0x36（subcommand）<br />Parameter 3：（int8_t）Was the reading successful（0：success；-1：fail）<br />Parameter 4：（uint16_t）lower limit<br />Parameter 5：（uint16_t）higher limit |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      7      | Parameter 1： (uint8_t)servo_id<br />Parameter 2： (uint8_t)0x36 (subcommand)<br />Parameter 3： (int8_t)Was the reading successful (0：success；-1：fail)<br />Parameter 4： (uint16_t)lower limit<br />Parameter 5： (uint16_t)higher limit |   CRC    |
 
 When a read command is received, the voltage limit parameters of the corresponding servo are read and uploaded to the host computer.
 
@@ -2603,7 +2608,7 @@ When a read command is received, the voltage limit parameters of the correspondi
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      4      | Parameter 1：（uint8_t）servo_id<br />Parameter 2：（uint8_t）0x3A（subcommand）<br />Parameter 3：（int8_t）Was the reading successful（0：success；-1：fail）<br />Parameter 4：（uint8_t）temperature limit |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_BUS_SERVO |      4      | Parameter 1： (uint8_t)servo_id<br />Parameter 2： (uint8_t)0x3A (subcommand)<br />Parameter 3： (int8_t)Was the reading successful (0：success；-1：fail)<br />Parameter 4： (uint8_t)temperature limit |   CRC    |
 
 When a read command is received, the temperature limit parameters of the corresponding servo are read and uploaded to the host computer.
 
@@ -2657,7 +2662,7 @@ The data for all 16 channels of the model aircraft's joysticks and switches are 
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      4      | Parameter 1：(uint8_t)servo_id<br />Parameter 2：(uint8_t)0x05（subcommand）<br />Parameter 3：(uint16_t)pulse width |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      4      | Parameter 1：(uint8_t)servo_id<br />Parameter 2：(uint8_t)0x05 (subcommand)<br />Parameter 3：(uint16_t)pulse width |   CRC    |
 
 Upon receiving the read command, read the pulse width of the corresponding servo and upload it to the host computer.
 
@@ -2665,7 +2670,7 @@ Upon receiving the read command, read the pulse width of the corresponding servo
 
 | Frame Header |     Function Code     | Data Length |                          Parameter                           | Checksum |
 | :----------: | :-------------------: | :---------: | :----------------------------------------------------------: | :------: |
-|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      3      | Parameter 1：(uint8_t)servo_id<br />Parameter 2：(uint8_t)0x05（subcommand）<br />Parameter 3：(int8_t)servo deviation |   CRC    |
+|  0xAA  0x55  | PACKET_FUNC_PWM_SERVO |      3      | Parameter 1：(uint8_t)servo_id<br />Parameter 2：(uint8_t)0x05 (subcommand)<br />Parameter 3：(int8_t)servo deviation |   CRC    |
 
 Upon receiving the read command, read the pulse width of the corresponding servo and upload it to the host computer.
 
@@ -2679,67 +2684,67 @@ Examples:
 
 1. Control the buzzer to sound 5 times, at a frequency of 1400Hz, each time for 100ms and stop for 100ms:
 
-   <span class="mark">AA 55 02 08 78 05 64 00 64 00 05 00 F0</span>
+AA 55 02 08 78 05 64 00 64 00 05 00 F0
 
 2. Control the buzzer to sound 10 times, at a frequency of 1000Hz, each time for 500ms and stop for 300ms:
 
-   <span class="mark">AA 55 02 08 E8 03 F4 01 2C 01 0A 00 8B</span>
+AA 55 02 08 E8 03 F4 01 2C 01 0A 00 8B
 
 3. Control the LED light to flash 10 times, each time on for 500ms and off for 300ms:
 
-   <span class="mark">AA 55 01 07 01 F4 01 2C 01 0A 00 04</span>
+AA 55 01 07 01 F4 01 2C 01 0A 00 04
 
 4. Control the LED light to flash 5 times, each time on for 100ms and off for 100ms:
 
-   <span class="mark">AA 55 01 07 01 64 00 64 00 05 00 37</span>
+AA 55 01 07 01 64 00 64 00 05 00 37
 
 5. Single motor control movement: Control motor 1 to rotate at -1r/s speed:
 
-   <span class="mark">AA 55 03 06 00 01 00 00 80 BF DA</span>
+AA 55 03 06 00 01 00 00 80 BF DA
 
 6. Control motor 1 to stop:
 
-   <span class="mark">AA 55 03 02 02 01 08</span>
+AA 55 03 02 02 01 08
 
 7. Control motor 1 and motor 2 to rotate at -1r/s and 2r/s respectively:
 
-   <span class="mark">AA 55 03 0C 01 02 01 00 00 80 BF 02 00 00 00 40 FB</span>
+AA 55 03 0C 01 02 01 00 00 80 BF 02 00 00 00 40 FB
 
 8. Control motors 0 and 2 to stop:
 
-   <span class="mark">AA 55 03 02 03 05 AD</span>
+AA 55 03 02 03 05 AD
 
 9. Control servo 1 and servo 2 to rotate to 90° and 180° respectively, corresponding to pulse widths of 1500, 2500, 2s:
 
-   <span class="mark">AA 55 03 09 01 D0 07 01 DC 05 02 C4 09 83</span>
+AA 55 03 09 01 D0 07 01 DC 05 02 C4 09 83
 
 10. Control PWM servo 1 to move to 1000:
 
-    <span class="mark">AA 55 04 06 03 e8 03 01 e8 03 e4</span>
+ AA 55 04 06 03 e8 03 01 e8 03 e4
 
 11. Set PWM servo deviation: Set the deviation of servo 2 to +10:
 
-    <span class="mark">AA 55 03 03 07 02 0A 53</span>
+ AA 55 03 03 07 02 0A 53
 
 12. Control bus servo rotation: Control bus servo No. 1 and No. 2 to 200° and 240° respectively, the corresponding pulse widths are 833 and 1000, and it takes 1s:
 
-    <span class="mark">AA 55 05 0A 01 E8 03 02 01 41 03 02 E8 03 9F</span>
+ AA 55 05 0A 01 E8 03 02 01 41 03 02 E8 03 9F
 
 13. Control the bus servo to rotate: Control bus servo No. 1 and No. 2 to rotate to 0°, the corresponding pulse width is 0, and the time is 1s:
 
-    <span class="mark">AA 55 05 0A 01 E8 03 02 01 00 00 02 00 00 D2</span>
+ AA 55 05 0A 01 E8 03 02 01 00 00 02 00 00 D2
 
 14. Control the bus servo with ID 1 to power off:
 
-    <span class="mark">AA 55 05 02 0B 01 B3</span>
+ AA 55 05 02 0B 01 B3
 
 15. Control the bus servo with ID 1 to power on:
 
-    <span class="mark">AA 55 05 02 0C 01 DD</span>
+ AA 55 05 02 0C 01 DD
 
 16. Change the ID of the bus servo with ID 1 to 2:
 
-    <span class="mark">AA 55 05 03 10 01 02 68</span>
+ AA 55 05 03 10 01 02 68
 
 ### 3.14.4 Expansion—Using the Calculator Tool for Base Conversion
 
@@ -2749,23 +2754,23 @@ Using the Windows Calculator for Base Conversion:
 
 <img class="common_img" src="../_static/media/chapter_3/section_14/media/image2.png" style="width:500px" />
 
-<span class="mark">②：Click on the Open Navigation button in the top left corner, and select Programmer.</span>
+②：Click on the Open Navigation button in the top left corner, and select Programmer.
 
 <img class="common_img" src="../_static/media/chapter_3/section_14/media/image3.png" style="width:300px" />
 
 <img class="common_img" src="../_static/media/chapter_3/section_14/media/image4.png" style="width:300px" />
 
-<span class="mark">③：Four bases are available for selection. Choose one base, input a value, and the equivalent values in the other three bases will be displayed.</span>
+③：Four bases are available for selection. Choose one base, input a value, and the equivalent values in the other three bases will be displayed.
 
 <img class="common_img" src="../_static/media/chapter_3/section_14/media/image5.png" style="width:300px" />
 
-<img class="common_img" src="../_static/media/chapter_3\section_14/media/image6.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_14/media/image6.png" style="width:300px" />
 
 ## 3.15 RRC Communication with the Host Computer - Sending Processing Source Code Analysis
 
 ### 3.15.1 Instructions for Modifying Host Computer Routine (MUST READ!!!)
 
-<span class="mark">To adapt to different types of chassis, the source code needs to be modified with the type parameter values and low voltage alarm thresholds!!!</span>
+To adapt to different types of chassis, the source code needs to be modified with the type parameter values and low voltage alarm thresholds!!!
 
 Since the RRC communication routine with the host computer is compatible with multiple chassis types, only the code of this routine needs to be modified.
 
@@ -2777,13 +2782,13 @@ If the low voltage alarm threshold is not modified, low voltage warnings cannot 
 
 1) Open the app.c file under the Hiwonder/System folder, and replace it with the corresponding chassis type value.
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_1\media\image1.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_1/media/image1.png" style="width:300px" />
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_1\media\image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_1/media/image2.png" style="width:500px" />
 
 2) Optional type macro definitions
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_1\media\image3.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_1/media/image3.png" style="width:300px" />
 
 CHASSIS_TYPE_JETAUTO —— Mecanum-wheel chassis
 
@@ -2797,17 +2802,17 @@ CHASSIS_TYPE_TANKBLACK —— Small continuous track chassis
 
 1) Open the global_conf.h file under the Hiwonder/System folder.
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_1\media\image4.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_1/media/image4.png" style="width:300px" />
 
 2) If the battery voltage is 12V, choose 9600; if it is 8V, choose 6300.
 
 Configuration for an 8V battery is as follows:
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_1\media\image5.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_1/media/image5.png" style="width:500px" />
 
 Configuration for a 12V battery is as follows:
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_1/media/image6.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_1/media/image6.png" style="width:500px" />
 
 ### 3.15.2 Program Logic
 
@@ -2817,7 +2822,7 @@ This section mainly analyzes the source code for sending communication between t
 
 The hardware connection diagram is shown below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image2.png" style="width:500px"  />
 
 ### 3.15.4 Program Download
 
@@ -2831,13 +2836,13 @@ After porting the ROS package, you can call the host computer interface to recei
 
 The development board's microcontroller uses UART3 serial port, converted to USB signal to communicate with the host computer through a conversion circuit. Pin information can be viewed in the stm32cubemx software. The corresponding chip pins are: PD8 and PD9.
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image3.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image3.png" style="width:300px" />
 
 ### 3.15.7 Source Code Analysis
 
-The program source code for this course is located in "**[RRC and Host Computer Communication Routine]()**" . The program framework is designed as shown below.
+The program source code for this course is located in "**[RRC and Host Computer Communication Routine](https://drive.google.com/drive/folders/1q7jdiZnsVk2aNSQNwyROBGa1V7Rjq7qB?usp=sharing)**" . The program framework is designed as shown below.
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image4.png" style="width:400px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image4.png" style="width:400px"  />
 
 The messages sent by the development board to the host computer are divided into five categories: bus servo messages, button messages, IMU messages, gamepad messages, and SBUS model remote control messages.
 
@@ -2845,7 +2850,7 @@ The messages sent by the development board to the host computer are divided into
 
 Each button action corresponds to a button event. When a button event is triggered, the corresponding button event message is uploaded to the host computer. In Hiwonder/System/app.c, the `button_event_callback()` function handles the event callback for buttons 1 and 2. When a button action changes, it enters this callback function, stores the button ID and its triggered event in the report structure, and uploads the button message to the host computer via the `packet_transmit()` function.
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image5.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image5.png" style="width:600px" />
 
 By enabling the commented-out printf function, compiling, and burning the program, you can see the button ID and event type values sent to the host computer in the serial port.
 
@@ -2853,11 +2858,11 @@ By enabling the commented-out printf function, compiling, and burning the progra
 
 After the IMU issues an interrupt, the microcontroller reads its current value and uploads it to the host computer. In the Hiwonder/Porting/imu_porting.c file, the `imu_task_entry()` function is responsible for reading IMU data. When this task reaches the `osSemaphoreAcquire()` function, it waits for a semaphore signal from the interrupt. Once the IMU issues an interrupt, the microcontroller interrupt sends a semaphore signal. When `osSemaphoreAcquire()` receives the signal, it continues executing the program, reads the IMU data, and uploads the message to the host computer via the `packet_transmit()` function. In the Application/User/Core/stm32f4xx_it.c file, the IMU interrupt triggers the following microcontroller interrupt to send a semaphore signal.
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image6.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image6.png" style="width:500px" />
 
 The reading task is as below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image7.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image7.png" style="width:600px" />
 
 By enabling the commented-out printf function, compiling, and burning the program, you can see the IMU attitude values sent to the host computer in the serial port. 
 
@@ -2877,13 +2882,13 @@ When the gamepad receiver is plugged in, it continuously triggers the gamepad da
 
 4. The gamepad data is uploaded to the host computer via the packet_transmit() function.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image8.png" style="width:600px" />
+   <img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image8.png" style="width:600px" />
 
 * **packet_transmit() Function Source Code Analysis**
 
 In the Hiwonder/Misc/packet.c file, the `packet_transmit()` function is defined as follows:
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image9.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image9.png" style="width:600px" />
 
 Parameter 1: Protocol controller object
 
@@ -2893,11 +2898,11 @@ Parameter 3: Data to be sent
 
 Parameter 4: Length of the data
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image10.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image10.png" style="width:500px" />
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image11.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image11.png" style="width:300px" />
 
-When sending data, you only need to pass in the default protocol controller object, defined in the Hiwonder/Porting/packet_porting.c file. The function codes are defined in the packet.h file, with nine available function codes. Detailed information can be found in "**[3.14 RRC Communication Protocol with the Host Computer Analysis]()**"
+When sending data, you only need to pass in the default protocol controller object, defined in the Hiwonder/Porting/packet_porting.c file. The function codes are defined in the packet.h file, with nine available function codes. Detailed information can be found in "**[3.14 RRC Communication Protocol with the Host Computer Analysis](#anchor_3_14)**"
 
 1)  The `packet_serialize()` function combines the function code, data, and data length into a protocol structure and returns it. The `packet_serialize()` function process is as follows:
 
@@ -2907,25 +2912,25 @@ When sending data, you only need to pass in the default protocol controller obje
 
 (3) Return the structure pointed to by p.
 
-<img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image12.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image12.png" style="width:600px" />
 
 2. The `send_packet()` structure member function uploads the assembled protocol data. The send_packet() function sends the data to the packet_tx queue.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image13.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image13.png" style="width:600px" />
 
-   The `packet_tx_task_entry()` protocol packet sending task function, defined in packet_porting.c, completes the data transmission to the host computer.
+The `packet_tx_task_entry()` protocol packet sending task function, defined in packet_porting.c, completes the data transmission to the host computer.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_15_2\media\image14.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_15_2/media/image14.png" style="width:600px" />
 
-   The protocol data is sent via the UART serial port to the conversion circuit, which converts the data to USB format and sends it to the host computer.
+The protocol data is sent via the UART serial port to the conversion circuit, which converts the data to USB format and sends it to the host computer.
 
-   This completes the entire protocol sending process.
+This completes the entire protocol sending process.
 
 ## 3.16 RRC and Host Computer Communication Receiving Processing Source Code Analysis
 
 ### 3.16.1 Instructions for Modifying Host Computer Routine (MUST READ!!!)
 
-<span class="mark">To adapt to different types of chassis, the source code needs to be modified with the type parameter values and low voltage alarm thresholds!!!</span>
+To adapt to different types of chassis, the source code needs to be modified with the type parameter values and low voltage alarm thresholds!!!
 
 Since the RRC communication routine with the host computer is compatible with multiple chassis types, only the code of this routine needs to be modified.
 
@@ -2937,13 +2942,13 @@ If the low voltage alarm threshold is not modified, low voltage warnings cannot 
 
 1) Open the app.c file under the Hiwonder/System folder, and replace it with the corresponding chassis type value.
 
-<img class="common_img" src="../_static/media/chapter_3\section_16_1\media\image1.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_16_1/media/image1.png" style="width:300px" />
 
-<img class="common_img" src="../_static/media/chapter_3\section_16_1\media\image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_16_1/media/image2.png" style="width:500px" />
 
 2) Optional type macro definitions
 
-<img class="common_img" src="../_static/media/chapter_3\section_16_1\media\image3.png" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_3/section_16_1/media/image3.png" style="width:400px" />
 
 CHASSIS_TYPE_JETAUTO —— Mecanum-wheel chassis
 
@@ -2957,17 +2962,17 @@ CHASSIS_TYPE_TANKBLACK —— Small continuous track chassis
 
 1) Open the global_conf.h file under the Hiwonder/System folder.
 
-<img class="common_img" src="../_static/media/chapter_3\section_16_1\media\image4.png" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_3/section_16_1/media/image4.png" style="width:400px" />
 
 2) If the battery voltage is 12V, choose 9600; if it is 8V, choose 6300.
 
 Configuration for an 8V battery is as follows:
 
-<img class="common_img" src="../_static/media/chapter_3\section_16_1\media\image5.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_16_1/media/image5.png" style="width:600px" />
 
 Configuration for a 12V battery is as follows:
 
-<img class="common_img" src="../_static/media/chapter_3\section_16_1/media/image6.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_16_1/media/image6.png" style="width:600px" />
 
 ### 3.16.2 Program Logic
 
@@ -2981,7 +2986,7 @@ The hardware connection diagram is as below:
 
 ### 3.16.4 Program Download
 
-The example for this section is "**[RosRobotControllerM4-armclang](本章节附件)**“.
+The example for this section is "**[RosRobotControllerM4-armclang](https://drive.google.com/drive/folders/18Lal9crX7ypoQxrp0pbXD2TBmQw4h4O0?usp=sharing)**".
 
 ### 3.16.5 Program Outcome
 
@@ -2995,7 +3000,7 @@ The development board's microcontroller uses UART3 serial port, which communicat
 
 ### 3.16.7 Source Code 
 
-The program source code for this session is located in '**[3.16 RRC and Host Computer Communication Receiving Processing Source Code Analysis](本章节附件)**'. The program framework is designed according to the functionality, as shown in the diagram below.
+The program source code for this session is located in '**[3.16 RRC and Host Computer Communication Receiving Processing Source Code Analysis](https://drive.google.com/drive/folders/18Lal9crX7ypoQxrp0pbXD2TBmQw4h4O0?usp=sharing)**'. The program framework is designed according to the functionality, as shown in the diagram below.
 
 <img class="common_img" src="../_static/media/chapter_3/section_16_2/media/image4.png" style="width:500px"  />
 
@@ -3021,7 +3026,7 @@ The definition of the LED control structure `LedCommandTypeDef` is as follows:
 
 <img class="common_img" src="../_static/media/chapter_3/section_16_2/media/image6.png" style="width:300px" />
 
-For specific parameter details, please refer to the LED control section in the '**[3.14 RRC Communication Protocol with the Host Computer Analysis]()**' document.
+For specific parameter details, please refer to the LED control section in the '**[3.14 RRC Communication Protocol with the Host Computer Analysis](#anchor_3_14)**' document.
 
 * **Reception of Buzzer Control Messages**
 
@@ -3039,7 +3044,7 @@ The definition of the `BuzzerCommandTypeDef` buzzer control structure is as foll
 
 <img class="common_img" src="../_static/media/chapter_3/section_16_2/media/image8.png" style="width:300px" />
 
-For specific parameter details, please refer to the buzzer control section in the '**[3.14 RRC Communication Protocol with the Host Computer Analysis]()**' document.
+For specific parameter details, please refer to the buzzer control section in the '**[3.14 RRC Communication Protocol with the Host Computer Analysis](#anchor_3_14)**' document.
 
 * **Reception of Encoder Motor Control Messages**
 
@@ -3075,7 +3080,7 @@ The definitions of various structures for encoder motor control are as follows:
 
 <img class="common_img" src="../_static/media/chapter_3/section_16_2/media/image13.png" style="width:300px" />
 
-For specific parameter details, please refer to the encoder motor control section in the '**[3.14 Analysis of RRC and Host Computer Communication Protocol]()**' document.
+For specific parameter details, please refer to the encoder motor control section in the '**[3.14 Analysis of RRC and Host Computer Communication Protocol](#anchor_3_14)**' document.
 
 * **Reception of Bus Servo Control Messages**
 
@@ -3097,7 +3102,7 @@ The definition of the bus servo control structure `SerialServoSetPositionCommand
 
 <img class="common_img" src="../_static/media/chapter_3/section_16_2/media/image15.png" style="width:300px" />
 
-For specific parameter details, please refer to the bus servo control section in the '**[3.14 RRC Communication Protocol with the Host Computer Analysis]()**' document.
+For specific parameter details, please refer to the bus servo control section in the '**[3.14 RRC Communication Protocol with the Host Computer Analysis](#anchor_3_14)**' document.
 
 * **Source Code Analysis of Serial Protocol Reception Task**
 
@@ -3147,7 +3152,7 @@ The received data is ultimately processed in the `packet_recv()` function within
 
 In the checksum verification segment of the above program, the callback function for the corresponding function code is called, achieving the host computer control functionality. The code snippet is shown below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_16_2/media/image24.png" style="width:700px" />
+<img class="common_img" src="../_static/media/chapter_3/section_16_2/media/image24.png" style="width:700px" />
 
 ## 3.17 RRC Bluetooth Control Reception and Processing Source Code Analysis
 
@@ -3341,13 +3346,13 @@ Examples:
 
 * **Physical Diagram**
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_1\media\image2.jpeg" style="width:400px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_18_1/media/image2.jpeg" style="width:400px"  />
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_1\media\image3.jpeg" style="width:400px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_18_1/media/image3.jpeg" style="width:400px"  />
 
 * **Parameter Description**
 
-<table  class="docutils-nobg" style="margin:0 auto" border="1">
+<table class="docutils-nobg" border="1">
 <colgroup>
 <col style="width: 24%" />
 <col style="width: 24%" />
@@ -3406,28 +3411,27 @@ Examples:
 </tbody>
 </table>
 
-
 * **Size & Structure**
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_1\media\image4.png" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_3/section_18_1/media/image4.png" style="width:400px" />
 
 * **Use Instructions**
 
-For information on how to use the LCD, please refer to: "**[3. RosRobot Controller Program Analysis/3.19 RCC LVGL Introduction and Source Code Analysis]()**".
+For information on how to use the LCD, please refer to: "**[3.19 RCC LVGL Introduction and Source Code Analysis](#anchor_3_19)**".
 
 ### 3.18.2 Principle
 
 The ST7735 is an SPI-driven LCD screen, which sends register commands and display data to operate the LCD via SPI. The timing diagram of the ST7735S chip is shown below. From the diagram, it can be observed that: When CSX is at a high level, data transmission starts by pulling it low, simultaneously SCL is pulled low, SDA starts transmitting data, then SCK is pulled high. This sequence repeats 8 times, after which CS is pulled high, indicating the completion of data writing.
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image2.png" style="width:500px" />
 
 ### 3.18.3 Physical Image of the Module
 
 The physical images of the ST7735S LCD screen are shown in the following two pictures:
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image3.jpeg" style="width:400px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image3.jpeg" style="width:400px"  />
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image4.jpeg" style="width:400px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image4.jpeg" style="width:400px"  />
 
 Pin connection rules (a total of 8 pins are connected to):
 
@@ -3444,11 +3448,11 @@ Pin connection rules (a total of 8 pins are connected to):
 
 The wiring positions on the STM32 development board are as shown in the diagram below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image5.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image5.png" style="width:500px" />
 
 Connect the LCD module to the position indicated by the red box in the diagram above. After connecting, it should appear as shown in the diagram below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image6.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image6.png" style="width:500px" />
 
 **Content Expansion:**
 
@@ -3462,7 +3466,7 @@ After understanding the driving principles of the LCD screen, you can design the
 
 The program structure diagram is shown in the figure below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image7.png" style="width:300px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image7.png" style="width:300px"  />
 
 From the diagram, it can be seen that when driving the LCD screen, it is necessary to initialize the LCD screen according to the LCD principle first, then enable the LCD screen before the program execution, and finally write functions based on the designed effects.
 
@@ -3470,17 +3474,17 @@ From the diagram, it can be seen that when driving the LCD screen, it is necessa
 
 The following content involves the program located in the folder 'RosRobotControllerM4_LCD' in the current directory, under the section titled '**RCC SPI LCD Screen Driver Example**' The program can be opened and viewed using Keil5 software.
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image8.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image8.png" style="width:500px" />
 
 **1. Initialize screen**
 
 Before powering on the screen, it's necessary to initialize the parameters of the LCD screen, which are located in the "**Hiwonder/System/app.c**" file. The function is as shown below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image9.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image9.png" style="width:300px" />
 
 The image below illustrates the content of the lcd_init function:
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image10.png" style="width:700px" />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image10.png" style="width:700px" />
 
 st7735 is an instantiation of a structure object st7735s, with the following parameters:
 
@@ -3506,7 +3510,7 @@ The final statement lcd = (DisplayObjectTypeDef\*)st7735 represents the conversi
 
 The function to enable the LCD screen is display_on. For specific implementation details, refer to the "**Hiwonder/Peripherals/display_st7735.c**" file.
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image11.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image11.png" style="width:500px" />
 
 The function to enable the LCD screen is display_on. For specific implementation details, refer to the "**Hiwonder/Peripherals/display_st7735.c**" file.
 
@@ -3514,19 +3518,21 @@ The function to enable the LCD screen is display_on. For specific implementation
 
 After enabling the LCD screen, you can use it to display colors. The function for displaying colors can also be found in the app.c file in the Hiwonder/System directory:
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image12.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image12.png" style="width:300px" />
 
 The image above shows that within the for loop, the color of the LCD screen is set to ST7735_RED (red). After programming, the effect is as shown below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image13.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image13.png" style="width:500px" />
 
 Similarly, changing the function ST7735_RED to ST7735_BLUE (blue) yields the effect shown in the image below:
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2\media\image14.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image14.png" style="width:500px" />
 
 For more color settings, you can refer to the display_st7735.h file in the Hiwonder/Peripherals directory (the definition section is shown below). Simply change the second parameter of the set_fill_image function.
 
-<img class="common_img" src="../_static/media/chapter_3\section_18_2/media/image15.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_18_2/media/image15.png" style="width:500px" />
+
+<p id="anchor_3_19"></p>
 
 ## 3.19 RCC LVGL Introduction and Source Code Analysis
 
@@ -3534,63 +3540,63 @@ For more color settings, you can refer to the display_st7735.h file in the Hiwon
 
 LVGL is a free and open-source graphics library, often considered a lightweight display framework, providing all the necessary features to create embedded graphical user interfaces, including easy-to-use graphical elements, good visual effects, and low memory consumption. It is written in C language, follows the MIT license, and can be freely used and modified. LVGL supports various operating systems such as Linux, Windows, RTOS, etc., and can also run on development boards. LVGL also supports various display drivers and touchscreen drivers, making it compatible with displays of different sizes and resolutions. LVGL (Graphics Library) features lightweight, multifunctional, flexible, and portable characteristics, and it is also compatible with the C++ programming language.
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image2.png" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image2.png" style="width:400px" />
 
 ### 3.19.2 Source Code Analysis
 
 * **Source Code Structure**
 
-According to the LVGL official website's downloaded archive (located at: "**[3.19 RCC LVGL Introduction and Source Code Analysis/RCC LVGL Source Code and Porting Routines/Source Code and Projects to be Ported](本章节附件)**"), proceed with program design after porting.
+According to the LVGL official website's downloaded archive (located at: "**[3.19 RCC LVGL Introduction and Source Code Analysis/RCC LVGL Source Code and Porting Routines/Source Code and Projects to be Ported](https://drive.google.com/drive/folders/1rhboQ8PjIrPZ4vwHeMrE-hIyyOuVWRtA?usp=sharing)**"), proceed with program design after porting.
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image3.png" style="width:300px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image3.png" style="width:300px"  />
 
 * **Source Code Structure Analysis**
 
-The upcoming program analysis will be based on the "**rosrobotcontrollerm4_LVGL**" project file located in "**[2.19 RCC LVGL Introduction and Source Code Analysis / Ported Example]()**". Users can refer to it for comparison.
+The upcoming program analysis will be based on the "**rosrobotcontrollerm4_LVGL**" project file located in "**[2.19 RCC LVGL Introduction and Source Code Analysis / Ported Example](https://drive.google.com/drive/folders/1rhboQ8PjIrPZ4vwHeMrE-hIyyOuVWRtA?usp=sharing)**". Users can refer to it for comparison.
 
 **1. Porting：**
 
 The "**Porting**" folder contains three C files and their corresponding header files.
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image4.png" style="width:500px" />
 
 Among them, **lv_port_disp.c** and its corresponding header file are commonly used, which contain the driver functions for driving the LVGL screen. The main functions to pay attention to inside are as follows:
 
 lv_port_disp_init：
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image5.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image5.png" style="width:300px" />
 
 Selects the graphic buffer mode, whether to use one buffer, two buffers, or three buffers. Here, only one buffer is used.
 
 Initializes the display driver structure.
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image6.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image6.png" style="width:300px" />
 
 Sets the screen resolution size, for example, in this case, the screen is 80x160 pixels (width x height).
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image7.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image7.png" style="width:300px" />
 
 **Specifies the refresh call function**. Here, the `default disp_flush()` function from the official example is used. This function needs to be written and completed by the user, primarily for drawing functions on the screen.
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image8.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image8.png" style="width:500px" />
 
 **Sets the screen display buffer mode.** Here, draw_buf_dsc_1 is chosen for low power consumption. It's recommended to keep the default setting.
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image9.png" style="width:700px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image9.png" style="width:700px" />
 
 Another important function is the refresh function (disp_flush):
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image10.png" style="width:700px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image10.png" style="width:700px" />
 
 This function directly provides the screen drawing interface to LVGL, allowing for the direct scanning, refreshing, and filling of individual pixels on the screen.
 
 The lv_port_fs file is related to the file system, providing functions for reading and writing to files. Users can refer to the comments associated with each function for understanding and learning. These functions mainly include file opening, reading, writing, and closing operations.
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image11.png" style="width:700px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image11.png" style="width:700px" />
 
 The `lv_port_indev` file is related to touch screen drivers. When the screen has touch functionality, the functions inside can be called for use. For example:
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image12.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image12.png" style="width:600px" />
 
 1. `touchpad_init(void)`: Initializes the touchpad of the screen.
 
@@ -3600,13 +3606,13 @@ The `lv_port_indev` file is related to touch screen drivers. When the screen has
 
 4. `touchpad_get_xy()`: Retrieves the x and y coordinates of the touch position.
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image13.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image13.png" style="width:600px" />
 
 Similarly, the file includes functions for mouse and keyboard operations.
 
 - Control source code src file:
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image14.png" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image14.png" style="width:400px" />
 
 The src folder contains many source files of the LVGL library, including:
 
@@ -3710,103 +3716,103 @@ When users need to develop their own projects, they can follow the steps below t
 
 1. Create a new folder named "**Lvgl**" in the newly created project file. The name can be customized.
 
-   Here, a project file is provided for users to simulate testing (**located in: "[3.19 RCC LVGL Introduction and Source Code AnalysisRCC LVGL Source Code and Porting Routines/Source Code and Projects to be Ported]()"**).
+Here, a project file is provided for users to simulate testing (**located in: "[3.19 RCC LVGL Introduction and Source Code AnalysisRCC LVGL Source Code and Porting Routines/Source Code and Projects to be Ported](https://drive.google.com/drive/folders/1rhboQ8PjIrPZ4vwHeMrE-hIyyOuVWRtA?usp=sharing)"**).
 
-   <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image15.png" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image15.png" style="width:400px" />
 
-2. Copy the '**src**' folder, '**lv_conf_template**', '**lvgl**' files inside the '**lvgl_configuration**' directory under the current directory '**[3.19 RCC LVGL Introduction and Source Code Analysis/RCC LVGL Source Code and Porting Routines/Source Code and Projects to be Ported]()**', as well as the '**example/Porting**' folder, into the '**Lvgl**' folder as shown in the figure below:
+2. Copy the '**src**' folder, '**lv_conf_template**', '**lvgl**' files inside the '**lvgl_configuration**' directory under the current directory '**[3.19 RCC LVGL Introduction and Source Code Analysis/RCC LVGL Source Code and Porting Routines/Source Code and Projects to be Ported](https://drive.google.com/drive/folders/1rhboQ8PjIrPZ4vwHeMrE-hIyyOuVWRtA?usp=sharing)**', as well as the '**example/Porting**' folder, into the '**Lvgl**' folder as shown in the figure below:
 
-   <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image16.png" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image16.png" style="width:400px" />
 
 3. Change the folder and folder name
 
 (1) Rename the configuration file '**lv_conf_template.h**' to '**lv_conf.h**'.
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image17.png" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image17.png" style="width:400px" />
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image18.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image18.png" style="width:500px" />
 
 (2) Rename the files under '**examples/porting**' as well, removing the '**\_template**' suffix
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image19.png" style="width:250px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image19.png" style="width:250px" />
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image20.png" style="width:250px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image20.png" style="width:250px" />
 
 4. **Adding Lvgl to the project:**
 
-   Open the project file with Keil5 (located in the MDK-ARM folder), then click on <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image21.png" style="width:200px" />to configure
+Open the project file with Keil5 (located in the MDK-ARM folder), then click on <img src="../_static/media/chapter_3/section_19_1/media/image21.png" style="width:200px" />to configure
 
-   Add the Lvgl source code by including all the .c files from the '**src**' directory into the project. Exclude the 'draw' folder from the '**src**' directory, except for the contents of the '**sw**' folder.
+Add the Lvgl source code by including all the .c files from the '**src**' directory into the project. Exclude the 'draw' folder from the '**src**' directory, except for the contents of the '**sw**' folder.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image22.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image22.png" style="width:500px" />
 
-   Also, add the source files from '**Lvgl/Porting**' to the project:
+Also, add the source files from '**Lvgl/Porting**' to the project:
 
-   <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image23.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image23.png" style="width:500px" />
 
-   Then, include the configuration files. These two files are located inside the '**Lvgl**' folder. When adding them, select '**all files**' to view them.
+Then, include the configuration files. These two files are located inside the '**Lvgl**' folder. When adding them, select '**all files**' to view them.
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image24.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image24.png" style="width:500px" />
 
-<img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image25.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image25.png" style="width:500px" />
 
 5. Include header files and relevant macro definitions, configure the compilation settings, and click on the magic wand icon at the top of the Keil5 software, as shown in the figure below:
 
-   <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image26.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image26.png" style="width:500px" />
 
-   <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image27.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image27.png" style="width:500px" />
 
-   Set macro definitions by filling in the following content in the '**Define**' section, separated by English commas:
+Set macro definitions by filling in the following content in the '**Define**' section, separated by English commas:
 
-   USE_HAL_DRIVER,STM32F407xx,
+USE_HAL_DRIVER,STM32F407xx,
 
-   LV_CONF_INCLUDE_SIMPLE,
+LV_CONF_INCLUDE_SIMPLE,
 
-   LV_LVGL_H_INCLUDE_SIMPLE,
+LV_LVGL_H_INCLUDE_SIMPLE,
 
-   NDEBUG
+NDEBUG
 
-   Then include the header files (Include Paths): Add the '**Lvgl' folder**."
+Then include the header files (Include Paths): Add the '**Lvgl' folder**."
 
-   <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image28.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image28.png" style="width:500px" />
 
-   Set character matching recognition (--locale=english), and similarly, set the compilation mode to C99:
+Set character matching recognition (--locale=english), and similarly, set the compilation mode to C99:
 
-   <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image29.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image29.png" style="width:500px" />
 
-   Back to the software interface, click on the '**Lvgl/porting.c**' folder, as shown in the figure below:
+Back to the software interface, click on the '**Lvgl/porting.c**' folder, as shown in the figure below:
 
-   Modify '**#if 0**' to '**#if 1**' in the '**lv_port_disp.c**' file,
+Modify '**#if 0**' to '**#if 1**' in the '**lv_port_disp.c**' file,
 
-   Change '**#include lv_port_disp_template.h**' to '**#include lv_port_disp.h**',
+Change '**#include lv_port_disp_template.h**' to '**#include lv_port_disp.h**',
 
-   If there are red wavy lines and error messages, disregard them,
+If there are red wavy lines and error messages, disregard them,
 
-   Then set the macro definitions for width and length according to your screen's resolution:
+Then set the macro definitions for width and length according to your screen's resolution:
 
-   ```py
-   #define MY_DISP_HOR_RES (160)
-   #define MY_DISP_VER_RES (80)
-   #define LV_VER_RES_MAX 60
-   ```
+```py
+#define MY_DISP_HOR_RES (160)
+#define MY_DISP_VER_RES (80)
+#define LV_VER_RES_MAX 60
+```
 
-   <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image30.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image30.png" style="width:500px" />
 
-   Click-on the compilation button for compilation:
+Click-on the compilation button for compilation:
 
-   <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image31.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image31.png" style="width:500px" />
 
-   Wait for the compilation to be completed:
+Wait for the compilation to be completed:
 
-   <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image32.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image32.png" style="width:600px" />
 
-   If no errors occur (warnings can be ignored), it indicates that the compilation is complete, and lvgl has been successfully integrated into the project.
+If no errors occur (warnings can be ignored), it indicates that the compilation is complete, and lvgl has been successfully integrated into the project.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_19_1\media\image33.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_19_1/media/image33.png" style="width:600px" />
 
-   > [!NOTE]
-   >
-   > **Note: lvgl8 requires Keil5 version 5.38 or higher with armclang to compile correctly. Here, it is advisable to use lvgl7 for compilation as much as possible.**
+> [!NOTE]
+>
+> **Note: lvgl8 requires Keil5 version 5.38 or higher with armclang to compile correctly. Here, it is advisable to use lvgl7 for compilation as much as possible.**
 
 ## 3.20 Introduction and Use of GUI Guider Interface Development Tool
 
@@ -3848,59 +3854,59 @@ Once all steps are completed in order, you should see the Gui-Guidier software i
 
 * **Use Method**
 
-1. Double-click '**GUI-Guider-1.5.1-GA**' <img class="common_img" src="../_static/media/chapter_3/section_20/media/image8.png" style="width:100px" /> to open the software. The initial interface is in English. Users can adjust it to Chinese for easier project creation in the future.
+1. Double-click '**GUI-Guider-1.5.1-GA**' <img src="../_static/media/chapter_3/section_20/media/image8.png" style="width:100px" /> to open the software. The initial interface is in English. Users can adjust it to Chinese for easier project creation in the future.
 
 2. Click '**Create a new project**' on the interface:
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image9.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image9.png" style="width:500px" />
 
 3. Select the LVGL version. Here, choose version V7.10.1. After selecting, click '**Next**':
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image10.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image10.png" style="width:500px" />
 
-   > [!NOTE]
-   >
-   > **Note: lvgl8 requires Keil 5.38 or higher with armclang to compile correctly.**
+> [!NOTE]
+>
+> **Note: lvgl8 requires Keil 5.38 or higher with armclang to compile correctly.**
 
 4. Select '**Simulator**', then click '**Simulator**', and finally click '**Next**' to proceed to the next step.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image11.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image11.png" style="width:500px" />
 
 5. To quickly experience how to import GUI programs into the LCD screen, choose the pre-edited sample provided by the software (select the first one here).
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image12.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image12.png" style="width:500px" />
 
-   Select '**ButtonCounter**' and click '**Next**'.
+Select '**ButtonCounter**' and click '**Next**'.
 
 6. Enter your project name. In this case, set it as '**new_project**'. Then browse for the project path you want to create. It's recommended to use an English path. Finally, click '**Create**'.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image13.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image13.png" style="width:500px" />
 
-   > [!NOTE]
-   >
-   > **!!! Note: A prompt box may appear at the bottom stating 'java version cannot be identified'. Click 'OK' here, then proceed to '3.1 Java Environment Installation and Check' to configure the environment and resolve this issue before continuing with the next steps!!!**
+> [!NOTE]
+>
+> **!!! Note: A prompt box may appear at the bottom stating 'java version cannot be identified'. Click 'OK' here, then proceed to '3.1 Java Environment Installation and Check' to configure the environment and resolve this issue before continuing with the next steps!!!**
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image14.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image14.png" style="width:500px" />
 
 7. Click on the language settings in the upper right corner and set it to Chinese. This will switch the interface language to Chinese.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image15.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image15.png" style="width:500px" />
 
 8. After confirming the design of your interface, click on this button option in the upper right corner of the software interface to generate the code.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image16.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image16.png" style="width:500px" />
 
-   If the warning bar shown in the following image appears, select '**Do not remind me again**' and then click '**OK**' to proceed.
+If the warning bar shown in the following image appears, select '**Do not remind me again**' and then click '**OK**' to proceed.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image17.png" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image17.png" style="width:400px" />
 
 9. If you see a prompt like this at the bottom of the interface, it means the program generation is complete!!!
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image18.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image18.png" style="width:500px" />
 
 10. Two folders (custom and generated) will be generated in the project directory previously selected.
 
-    <img class="common_img" src="../_static/media/chapter_3/section_20/media/image19.png" style="width:500px" />
+ <img class="common_img" src="../_static/media/chapter_3/section_20/media/image19.png" style="width:500px" />
 
 > [!NOTE]
 >
@@ -3912,39 +3918,39 @@ Once all steps are completed in order, you should see the Gui-Guidier software i
 
 1. Open the '**openjdk-20.0.1_windows-x64_bin**' folder in the software, copy it to your computer, ensuring it's in an English path (it's recommended to extract it to 'C:\Program Files\openjdk-20.0.1_windows-x64_bin').
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image20.png" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image20.png" style="width:400px" />
 
 2. After extraction, add environment variables. Press the '**Win**' key, and search for '**Environment Variables**'.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image21.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image21.png" style="width:500px" />
 
 3. Then click on '**Advanced**', followed by '**Environment Variables**', and add the Java extraction location to the environment variables.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image22.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image22.png" style="width:500px" />
 
 4. Select '**Path**' in the Administrator user variables, then click 'Edit'.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image23.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image23.png" style="width:500px" />
 
 5. Click on '**New**', then add the paths from points 2, 3, and 4 in the figure below to the options, and finally click '**OK**' to return to the previous level interface.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image24.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image24.png" style="width:500px" />
 
 6. Similarly, in the '**System Variables**', select '**Path**', then click '**Edit**':
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image25.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image25.png" style="width:500px" />
 
 7. Similarly, click '**New**', then add the paths from points 2, 3, and 4 in the figure below to the environment variables, and finally click '**OK**'.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image26.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image26.png" style="width:500px" />
 
 8. Close the Environment Variables window, then press the '**Win**' key, type '**cmd**', and open the Command Prompt:
 
-   <img class="common_img" src="../_static/media/chapter_3/section_20/media/image27.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image27.png" style="width:500px" />
 
 9. Enter '**java -version**' for version verification. If the content shown in the image below appears, it indicates that the Java environment has been added to the system environment, and you can return to Gui-Guider for project editing.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_20/media/image28.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_3/section_20/media/image28.png" style="width:600px" />
 
 ## 3.21 RCC LCD Screen System Status Display Source Code Analysis
 
@@ -3954,7 +3960,7 @@ Based on the content of the previous sections, this subsection will use the RCC 
 
 ### 3.21.2 Source Code Analysis
 
-The source code is located in the "**[3.21 RCC LCD Screen System Status Display Routine/RosRobotControllerM4_LCD_battery]()**" directory within the current document. Open it with Keil5 software for reference.
+The source code is located in the "**[3.21 RCC LCD Screen System Status Display Routine/RosRobotControllerM4_LCD_battery](https://drive.google.com/drive/folders/17UVgReb55nIFmJzqaNQ8ZQWFE_h6PrTH?usp=sharing)**" directory within the current document. Open it with Keil5 software for reference.
 
 * **Program Structure Diagram**
 
@@ -3968,13 +3974,13 @@ Based on the program structure diagram, the source code is analyzed as follows:
 
 1. **UI objects**
 
-   After designing the interface with the GUI-Guider software, load the generated files into the project. The program is located in the "**Hiwonder/LVGL_UI**" folder within the gui_guider.h header file.
+After designing the interface with the GUI-Guider software, load the generated files into the project. The program is located in the "**Hiwonder/LVGL_UI**" folder within the gui_guider.h header file.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_21/media/image3.png" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_3/section_21/media/image3.png" style="width:400px" />
 
 2. **Task Function**
 
-   The `gui_task_entry()` function in the gui_handle.c file under the Hiwonder/System directory is the user’s GUI display task function.
+The `gui_task_entry()` function in the gui_handle.c file under the Hiwonder/System directory is the user's GUI display task function.
 
 **1. UI Initialization**
 
