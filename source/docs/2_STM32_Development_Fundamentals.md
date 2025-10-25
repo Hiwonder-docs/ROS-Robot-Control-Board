@@ -2,7 +2,9 @@
 
 ## 2.1 Development Environment Setup
 
-<img class="common_img" src="../_static/media/chapter_2/section_1/media/image2.png" style="width:50px" />After installing the Keil software, please activate it. Otherwise, compilation failures may occur, affecting normal usage.
+After installing the Keil software, please activate it. Otherwise, compilation failures may occur, affecting normal usage.
+
+<p id="anchor_2_1_1"></p>
 
 ### 2.1.1 Keil Software Installation
 
@@ -10,7 +12,7 @@ Keil is specialized software designed for microcontrollers, with powerful functi
 
 1. Go to the folder '**Keil Installation Package and mcuisp Download Tool**', double-click the '**mdk536.exe**' file.
 
-   <img class="common_img" src="../_static/media/chapter_2/section_1/media/image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_1/media/image3.png" style="width:500px" />
 
 2. Check the options and agree to the installation agreement.
 
@@ -30,7 +32,7 @@ Keil is specialized software designed for microcontrollers, with powerful functi
 
 6. Wait for a moment, a prompt to install the ULink driver will pop up, click '**Install**' at this time.
 
-   <img class="common_img" src="../_static/media/chapter_2/section_1/media/image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_2/section_1/media/image8.png" style="width:500px"  />
 
 7. After the installation is complete, click '**Finish**' to exit.
 
@@ -44,7 +46,7 @@ After opening it, click '**Next**'.
 
 <img class="common_img" src="../_static/media/chapter_2/section_1/media/image9.png" style="width:500px" />
 
-Wait for the installation to be completed, then click-on ‘**Finish**’ button.
+Wait for the installation to be completed, then click-on '**Finish**' button.
 
 <img class="common_img" src="../_static/media/chapter_2/section_1/media/image10.png" style="width:500px" />
 
@@ -54,9 +56,11 @@ Reopen the Keil software, then click-on **pack installer** icon.
 
 <img class="common_img" src="../_static/media/chapter_2/section_1/media/image12.png" style="width:500px" />
 
-Click-on ‘**Device**’ button. Then choose the correct device as pictured.
+Click-on '**Device**' button. Then choose the correct device as pictured.
 
 <img class="common_img" src="../_static/media/chapter_2/section_1/media/image13.png" style="width:500px" />
+
+<p id="anchor_2_1_2_1"></p>
 
 * **Install J-Link Driver**
 
@@ -66,7 +70,7 @@ You can find the J-Link installation package in this section's directory, then d
 
 <img class="common_img" src="../_static/media/chapter_2/section_1/media/image14.png" style="width:500px" />
 
-Choose ‘**I Agree**’.
+Choose '**I Agree**'.
 
 <img class="common_img" src="../_static/media/chapter_2/section_1/media/image15.png" style="width:500px" />
 
@@ -90,7 +94,7 @@ The installation package can be found in this section's directory. Double-click 
 
 <img class="common_img" src="../_static/media/chapter_2/section_1/media/image19.png" style="width:500px" />
 
-Tick ‘**I accept the terms of this license agreement**’, and click-on ‘Next’ button.
+Tick '**I accept the terms of this license agreement**', and click-on 'Next' button.
 
 <img class="common_img" src="../_static/media/chapter_2/section_1/media/image20.png" style="width:500px" />
 
@@ -114,41 +118,41 @@ This lesson will use software to write a program for the LED on the STM32 main c
 
 * **Software Preparation**
 
-1.  Keil5 and related environment configuration (if not installed or configured, installation methods can be found in "**[2.1 Development Environment Setup->2.1.1 Keil Software Installation]()**").
+1.  Keil5 and related environment configuration (if not installed or configured, installation methods can be found in "**[2.1.1 Keil Software Installation](#anchor_2_1_1)**").
 
-2.  J-Link firmware installation (if not installed or configured, installation methods can be found in "**[2.1.2 Configuration ->Install J-Link Driver]()**") for burning.
+2.  J-Link firmware installation (if not installed or configured, installation methods can be found in "**[2.1.2 Configuration ->Install J-Link Driver](#anchor_2_1_2_1)**") for burning.
 
 * **Hardware Preparation**
 
 1. STM32 Main Controller
 
-   <img class="common_img" src="../_static/media/chapter_2/section_2/media/image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_2/media/image2.png" style="width:500px" />
 
 2. The Jlink debugger and a Micro-USB data cable (self-provided) are used for code flashing.
 
-   <img class="common_img" src="../_static/media/chapter_2/section_2/media/image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_2/media/image3.png" style="width:500px" />
 
 ### 2.2.3 Operation Steps
 
 1. After connecting the Jlink debugger and the Micro-USB data cable, insert the DuPont female connector on the other end of the Jlink into the corresponding pin position on the STM32 main control board:
 
-   <img class="common_img" src="../_static/media/chapter_2/section_2/media/image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_2/media/image4.png" style="width:500px" />
 
-   Connect according to the corresponding positions (four wires connected in parallel):
+Connect according to the corresponding positions (four wires connected in parallel):
 
-   Red VCC connects to the 3V3 pin of the STM32.
+Red VCC connects to the 3V3 pin of the STM32.
 
-   Green SWDIO connects to the PA13 pin of the STM32.
+Green SWDIO connects to the PA13 pin of the STM32.
 
-   Yellow SWCLK connects to the PA14 pin of the STM32.
+Yellow SWCLK connects to the PA14 pin of the STM32.
 
-   Black GND connects to the GND pin of the STM32.
+Black GND connects to the GND pin of the STM32.
 
-   The STM32 pin layout is shown in the diagram below:
+The STM32 pin layout is shown in the diagram below:
 
-   <img class="common_img" src="../_static/media/chapter_2/section_2/media/image5.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_2/media/image5.png" style="width:500px" />
 
-2. Download the program: For detailed download methods (Jlink download and Type-C serial port download), refer to '**[2.3 Project Compilation & Download]()**'".
+2. Download the program: For detailed download methods (Jlink download and Type-C serial port download), refer to '**[2.3 Project Compilation & Download](#anchor_2_3)**'".
 
 ### 2.2.4 Core Program Analysis
 
@@ -180,6 +184,8 @@ After flashing the program, you can disconnect the Jlink programming cable and p
 
 <p style="text-align:center">Effect Diagram 2 (LED Light On)</p>
 
+<p id="anchor_2_3"></p>
+
 ## 2.3 Project Compilation & Download
 
 ### 2.3.1 Project Compilation
@@ -190,23 +196,23 @@ Once the program is written, we need to compile it into machine language for exe
 
 In the Keil5 software interface menu bar, click on the '**Project**' option, then click on the 'Options for File '**app.c**'' button.
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image2.png" style="width:500px"  />
 
 Click on the "**OutPut**" option, tick the three red options below, and then click "**OK**".
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image3.png" style="width:500px" />
 
 2. In the Keil5 software interface menu bar, click on the "**Project**" option, then select "**Build Target**" from the drop-down menu that appears to compile the project, as shown in the figure below:
 
-   <img class="common_img" src="../_static/media/chapter_2\section_3\media\image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image4.png" style="width:500px" />
 
-   You can also compile by clicking on the corresponding icon on the toolbar, as shown in the figure below:
+You can also compile by clicking on the corresponding icon on the toolbar, as shown in the figure below:
 
-   <img class="common_img" src="../_static/media/chapter_2\section_3\media\image5.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image5.png" style="width:500px" />
 
-   The following message appeared in the "**Build Output**" window at the bottom of the software, indicating a successful compilation.
+The following message appeared in the "**Build Output**" window at the bottom of the software, indicating a successful compilation.
 
-   <img class="common_img" src="../_static/media/chapter_2\section_3\media\image6.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image6.png" style="width:500px" />
 
 > [!NOTE]
 >
@@ -218,9 +224,9 @@ After compiling the project, you can download the generated hex file to the STM3
 
 * **Software & Hardware Preparation**
 
-**Software:** mcuisp (included in the attachments). For specific installation instructions, please refer to "**[Appendix]()**".
+**Software:** mcuisp (included in the attachments). For specific installation instructions, please refer to "**[Appendix](https://drive.google.com/drive/folders/1wYGlUMJuNYYNTIAeKbFgjqhX0qfjMQ66?usp=sharing)**".
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image7.png" style="width:100px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image7.png" style="width:100px" />
 
 **Hardware:** Type-C cable and STM32 controller
 
@@ -228,7 +234,7 @@ After compiling the project, you can download the generated hex file to the STM3
 
 1.  Type-C to USB cable is used to connect the computer and the STM32 main control board (hereinafter referred to as Type-C cable).
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image8.png" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image8.png" style="width:400px" />
 
 2.  STM32 Controller
 
@@ -238,11 +244,11 @@ The specific operation steps are as follows, with the programmed named "**Blinki
 
 Insert the Type-C cable into the Type-C port (UART1) of the STM32 main control board and connect it to the USB port of the computer.
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image9.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image9.png" style="width:500px" />
 
 <p style="text-align:center">[UART1]</p>
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image10.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image10.png" style="width:500px" />
 
 <p style="text-align:center">[UART2]</p>
 
@@ -250,31 +256,31 @@ Insert the Type-C cable into the Type-C port (UART1) of the STM32 main control b
 
 Open the mcuisp software, click on "**Search Serial Port**" in the menu bar at the top of the software, then set the baud rate (bps) to 115200.
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image11.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image11.png" style="width:500px" />
 
 Click on the "**STMISP**" option in the software interface.
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image12.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image12.png" style="width:500px" />
 
 Select "**DTR low level reset, RTS high level to enter BootLoader**" at the bottom.
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image13.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image13.png" style="width:500px" />
 
 **（3）Software Burning:**
 
 Click on the button inside the red box in the mcuisp software interface, and select the hex file that needs to be burned.
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image14.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image14.png" style="width:500px" />
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image15.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image15.png" style="width:500px" />
 
 Return to the previous interface and click on the "**Start ISP**" button to burn the generated hex file onto the STM32 main control board.
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image16.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image16.png" style="width:500px" />
 
 Burning in progress
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image17.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image17.png" style="width:500px" />
 
 If the sidebar displays the following image, it indicates that the burning process is complete.
 
@@ -282,9 +288,9 @@ If the sidebar displays the following image, it indicates that the burning proce
 >
 > **Note: The STM32 main control board comes with pre-loaded software (resulting in LED1 blinking blue every 1 second). If you need to burn the PS2 joystick control program, you can find the RosRobotControllerM4.hex file in the 'Chapter 1: Introduction to the Car Hardware and Usage / Section 2: PS2 Joystick Remote Control / Program / rosrobotcontrollerm4_motor_ps2 / MDK-ARM / RosRobotControllerM4' folder for burning.**
 
-<img class="common_img" src="../_static/media/chapter_2\section_3\media\image17.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image17.png" style="width:500px" />
 
-If burning fails, refer to the '**Troubleshooting Guide**' document in the '**[Appendix]()**' folder for assistance.
+If burning fails, refer to the '**Troubleshooting Guide**' document in the '**[Appendix](https://drive.google.com/drive/folders/1wYGlUMJuNYYNTIAeKbFgjqhX0qfjMQ66?usp=sharing)**' folder for assistance.
 
 > [!NOTE]
 >
@@ -304,7 +310,7 @@ SWD Debugging (Serial Debugging): A communication protocol for ARM core debugger
 
 **Software Preparation:** Keil5 software (refer to previous sections for installation and compilation methods).
 
-Jlink driver (found and installed from the "**[Appendix]()**" folder).
+Jlink driver (found and installed from the "**[Appendix](https://drive.google.com/drive/folders/1wYGlUMJuNYYNTIAeKbFgjqhX0qfjMQ66?usp=sharing)**" folder).
 
 **Hardware preparation:** Jlink emulator (self-supplied, with Dupont wires) and a MicroUSB cable.
 
@@ -312,9 +318,9 @@ Jlink driver (found and installed from the "**[Appendix]()**" folder).
 
 Connect Jlink to the stm32 controller as below:
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image2.png" style="width:500px" />
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image3.jpeg" style="width:400px"  />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image3.jpeg" style="width:400px"  />
 
 The wiring guidelines are as follows:
 
@@ -332,39 +338,39 @@ After completing the wiring, you can start software debugging.
 
 Open the Keil5 software and click the button on the icon to enter the environment configuration interface.
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image4.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image4.png" style="width:600px" />
 
 Click the "**Debug**" button, then select "**J-LINK/J-TRACE Cortex**" from the "**Use**" dropdown menu.
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image5.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image5.png" style="width:500px"  />
 
-Click-on ‘**Settings**’ to initiate configuration.
+Click-on '**Settings**' to initiate configuration.
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image6.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image6.png" style="width:500px" />
 
 In the "**SN**" option, the serial number will be automatically recognized. Select it or keep the default setting. Then, in the "**Port**" option below, select "**SW**" and finally click "**OK**".
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image7.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image7.png" style="width:500px"  />
 
 Return to the previous interface, click "**Device**", select the corresponding chip model, and then click "**OK**".
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image8.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image8.png" style="width:500px" />
 
 * **Debug**
 
 Click the "**Debug**" button on the Keil5 software interface to enter the debugging interface.
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image9.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image9.png" style="width:500px" />
 
 If the "**Output**" pane at the bottom displays the debugging loading process and no errors occur, it indicates normal operation.
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image10.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image10.png" style="width:500px" />
 
 **\>\> Debugging Program Execution**
 
 In the debug interface toolbar (as shown below), the contents within the red box, from left to right:
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image11.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image11.png" style="width:500px" />
 
 **Reset**: Resets the program; the reset type triggered depends on the configuration of the burner.
 
@@ -382,7 +388,7 @@ Run to Cursor Line.
 
 * **Variable Checking**
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image12.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image12.png" style="width:600px" />
 
 The button in the image above is the variable monitoring button, used to observe the assignment of variables during program execution.
 
@@ -390,15 +396,15 @@ The button in the image above is the variable monitoring button, used to observe
 
 Pay attention to the msg variable in the program (users can choose the values they want to observe as examples during debugging).
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image13.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image13.png" style="width:300px" />
 
 After selecting the msg variable, right-click and choose "**Add 'msg' to**", then select the observation window Watch1 or Watch2.
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image14.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image14.png" style="width:500px"  />
 
 You can now observe the real-time value of msg in the Watch1 window below.
 
-<img class="common_img" src="../_static/media/chapter_2\section_4\media\image15.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image15.png" style="width:500px"  />
 
 > [!NOTE]
 >
@@ -432,7 +438,7 @@ The example program for this section is named "**Hiwonder_FreeRTOS_LED**".
 
 1. After double-clicking to open the STM32CubeMX software, the following interface will appear:
 
-   <img class="common_img" src="../_static/media/chapter_2/section_5/media/image4.png" style="width:600px" />
+<img class="common_img" src="../_static/media/chapter_2/section_5/media/image4.png" style="width:600px" />
 
 2. Click on "**File**". If you already have a project created by STM32CubeMX, you can click on the second option "**Load Project...**"; if you want to create a new project, click on the first option "**New Project**".
 
@@ -604,7 +610,7 @@ Click on "**Project Manager**" to enter the project generation configuration, fo
 
 <img class="common_img" src="../_static/media/chapter_2/section_5/media/image24.png" style="width:600px" />
 
-Click-on ‘**GENERATE CODE**’ button at the upper right corner.
+Click-on '**GENERATE CODE**' button at the upper right corner.
 
 <img class="common_img" src="../_static/media/chapter_2/section_5/media/image25.png" style="width:600px" />
 
@@ -667,4 +673,4 @@ Set the LED pin to high level;
 
 After compilation, once there are no errors indicated below, you can proceed to download and burn the program.
 
-<img class="common_img" src="../_static/media/chapter_2\section_5/media/image34.png" style="width:700px"  />
+<img class="common_img" src="../_static/media/chapter_2/section_5/media/image34.png" style="width:700px"  />
